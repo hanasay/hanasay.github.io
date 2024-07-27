@@ -160,7 +160,7 @@
   
     
       <article
-id="post-page"
+id="post-leetcode-132-pattern"
 class="article article-type-post"
 >
 
@@ -171,11 +171,13 @@ class="article article-type-post"
 
     <div class="article-body">
     <header class="article-title">
-        <a href="/2024/07/26/page/">page</a>
+        <a href="/2024/07/28/leetcode-132-pattern/">leetcode_132-pattern</a>
     </header>
     <div class="article-entry post-inner-html">
         
-        
+        <h2 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述"></a>題目概述</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/132-pattern/">題目</a></p>
+<p>給定輸入矩陣，檢查是否有 “小、大、中” 的子集。</p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">find132pattern</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        length = <span class="built_in">len</span>(nums)</span><br><span class="line">        data = []</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(data) &gt; <span class="number">1</span>:</span><br><span class="line">                out = <span class="literal">False</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(ans), <span class="number">2</span>):</span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] == ans[j] <span class="keyword">and</span> data[-<span class="number">1</span>] == ans[j+<span class="number">1</span>]: out = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] &lt;= ans[j] <span class="keyword">and</span> data[-<span class="number">1</span>] &gt; ans[j]: out = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] &lt; ans[j+<span class="number">1</span>] <span class="keyword">and</span> data[-<span class="number">1</span>] &gt;= ans[j+<span class="number">1</span>]: out = <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> out:</span><br><span class="line">                    ans[j] = data[<span class="number">0</span>]</span><br><span class="line">                    ans[j+<span class="number">1</span>] = data[-<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    ans.append(data[<span class="number">0</span>])</span><br><span class="line">                    ans.append(data[-<span class="number">1</span>])</span><br><span class="line">                <span class="comment">#if nums[i] &lt; data[0]: return True</span></span><br><span class="line">            <span class="keyword">while</span> <span class="built_in">len</span>(data) != <span class="number">0</span> <span class="keyword">and</span> data[-<span class="number">1</span>] &gt; nums[i]: data.pop(-<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(ans) &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="comment">#print(ans)</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(ans), <span class="number">2</span>):</span><br><span class="line">                    <span class="comment">#print(j)</span></span><br><span class="line">                    <span class="comment">#print(nums[i])</span></span><br><span class="line">                    <span class="keyword">if</span> nums[i] &gt; ans[j] <span class="keyword">and</span> nums[i] &lt; ans[j+<span class="number">1</span>]: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            data.append(nums[i])</span><br><span class="line">        <span class="comment">#print(data)</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
         
     </div>
     </div>
@@ -190,7 +192,7 @@ class="article article-type-post"
 <footer class="article-footer">
     <div class="article-more-info">
     <div class="article-date">
-  <time datetime="2024-07-26T04:01:29.000Z" itemprop="datePublished">2024-07-26</time>
+  <time datetime="2024-07-27T18:57:38.000Z" itemprop="datePublished">2024-07-28</time>
 </div>
     
     
@@ -203,7 +205,7 @@ class="article article-type-post"
   
     
       <article
-id="post-hello-world"
+id="post-leetcode-arithmetic-slices"
 class="article article-type-post"
 >
 
@@ -214,24 +216,13 @@ class="article article-type-post"
 
     <div class="article-body">
     <header class="article-title">
-        <a href="/2024/07/26/hello-world/">Hello World</a>
+        <a href="/2024/07/28/leetcode-arithmetic-slices/">leetcode_arithmetic-slices</a>
     </header>
     <div class="article-entry post-inner-html">
         
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+        <h2 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述"></a>題目概述</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/arithmetic-slices">題目</a></p>
+<p>找出所有等差數列的子矩陣數量，子矩陣長度至少為3</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">numberOfArithmeticSlices</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 建置新的矩陣，紀錄前後差值</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)-<span class="number">1</span>):</span><br><span class="line">            data.append(nums[i+<span class="number">1</span>]-nums[i])</span><br><span class="line">        data.append(-<span class="number">3000</span>)</span><br><span class="line">        left = data[<span class="number">0</span>]</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果差值相同就進行機制演算</span></span><br><span class="line">        <span class="comment"># 可排列可能是從1開始等加上去的</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">            <span class="keyword">if</span> i != left:</span><br><span class="line">                cnt = <span class="number">0</span></span><br><span class="line">                left = i</span><br><span class="line">            <span class="keyword">if</span> i == left:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> cnt &gt; <span class="number">1</span>: ans += cnt-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
         
     </div>
     </div>
@@ -246,7 +237,7 @@ class="article article-type-post"
 <footer class="article-footer">
     <div class="article-more-info">
     <div class="article-date">
-  <time datetime="2024-07-26T03:50:41.473Z" itemprop="datePublished">2024-07-26</time>
+  <time datetime="2024-07-27T18:55:35.000Z" itemprop="datePublished">2024-07-28</time>
 </div>
     
     
@@ -286,11 +277,11 @@ class="article article-type-post"
       <ul>
         
           <li>
-            <a href="/2024/07/26/page/">page</a>
+            <a href="/2024/07/28/leetcode-132-pattern/">leetcode_132-pattern</a>
           </li>
         
           <li>
-            <a href="/2024/07/26/hello-world/">Hello World</a>
+            <a href="/2024/07/28/leetcode-arithmetic-slices/">leetcode_arithmetic-slices</a>
           </li>
         
       </ul>

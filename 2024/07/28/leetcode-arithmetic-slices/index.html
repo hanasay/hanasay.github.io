@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>page | Matt Zheng</title>
+    <title>leetcode_arithmetic-slices | Matt Zheng</title>
 
     <meta name="description" content="Matt Zheng">
     <meta name="keywords" content="AI, llm, asr, python, leetcode">
@@ -15,21 +15,21 @@
 
     <meta property="og:locale" content="cn" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "page | Matt Zheng"  />
+    <meta property="og:title" content= "leetcode_arithmetic-slices | Matt Zheng"  />
     <meta property="og:description" content= "Matt Zheng" />
-    <meta property="og:url" content="http://hanasay.codex.tw/2024/07/26/page/index.html" />
+    <meta property="og:url" content="http://hanasay.codex.tw/2024/07/28/leetcode-arithmetic-slices/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Matt Zheng" />
     <meta property="article:publisher" content="" />
     <meta property="og:description" content="Matt Zheng" />
-    <meta name="twitter:title" content="page | Matt Zheng"/>
+    <meta name="twitter:title" content="leetcode_arithmetic-slices | Matt Zheng"/>
     <meta name="twitter:description" content="Matt Zheng"/>
     <script type="application/ld+json">
         {
             "description": "Matt Zheng",
             "author": { "@type": "Person", "name": "Matt Zheng" },
             "@type": "BlogPosting",
-            "url": "http://hanasay.codex.tw/2024/07/26/page/index.html",
+            "url": "http://hanasay.codex.tw/2024/07/28/leetcode-arithmetic-slices/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -38,11 +38,11 @@
             },
             "name": "Matt Zheng"
             },
-            "headline": "page | Matt Zheng",
-            "datePublished": "2024-07-26T04:01:29.000Z",
+            "headline": "leetcode_arithmetic-slices | Matt Zheng",
+            "datePublished": "2024-07-27T18:55:35.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://hanasay.codex.tw/2024/07/26/page/index.html"
+                "@id": "http://hanasay.codex.tw/2024/07/28/leetcode-arithmetic-slices/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -171,7 +171,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-clz4hpscp0001og4gbkvif6a8" class="article article-type-post" itemscope
+    <article id="post-clz4hynac0003ts4gf7jbhhle" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -187,7 +187,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      page
+      leetcode_arithmetic-slices
     </h1>
   
 
@@ -197,7 +197,7 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2024-07-26T04:01:29.000Z" itemprop="datePublished">2024-07-26</time>
+  <time datetime="2024-07-27T18:55:35.000Z" itemprop="datePublished">2024-07-28</time>
 </div>
 
             
@@ -209,7 +209,9 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            
+            <h2 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述"></a>題目概述</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/arithmetic-slices">題目</a></p>
+<p>找出所有等差數列的子矩陣數量，子矩陣長度至少為3</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">numberOfArithmeticSlices</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 建置新的矩陣，紀錄前後差值</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)-<span class="number">1</span>):</span><br><span class="line">            data.append(nums[i+<span class="number">1</span>]-nums[i])</span><br><span class="line">        data.append(-<span class="number">3000</span>)</span><br><span class="line">        left = data[<span class="number">0</span>]</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果差值相同就進行機制演算</span></span><br><span class="line">        <span class="comment"># 可排列可能是從1開始等加上去的</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">            <span class="keyword">if</span> i != left:</span><br><span class="line">                cnt = <span class="number">0</span></span><br><span class="line">                left = i</span><br><span class="line">            <span class="keyword">if</span> i == left:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> cnt &gt; <span class="number">1</span>: ans += cnt-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
         </div>
 
     </div>
@@ -227,11 +229,15 @@
     
 <nav class="article-nav">
   
-  
-    <a href="/2024/07/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2024/07/28/leetcode-132-pattern/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          leetcode_132-pattern
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -239,15 +245,15 @@
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=page - Matt Zheng&url=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F07%2F26%2Fpage%2F">
+            href="https://twitter.com/share?text=leetcode_arithmetic-slices - Matt Zheng&url=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F07%2F28%2Fleetcode-arithmetic-slices%2F">
             <ion-icon name="logo-twitter"></ion-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=page - Matt Zheng&u=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F07%2F26%2Fpage%2F">
+            href="https://www.facebook.com/sharer.php?title=leetcode_arithmetic-slices - Matt Zheng&u=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F07%2F28%2Fleetcode-arithmetic-slices%2F">
             <ion-icon name="logo-facebook"></ion-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=page - Matt Zheng&url=http://hanasay.codex.tw/2024/07/26/page/&pic=">
+            href="https://service.weibo.com/share/share.php?title=leetcode_arithmetic-slices - Matt Zheng&url=http://hanasay.codex.tw/2024/07/28/leetcode-arithmetic-slices/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
@@ -301,11 +307,11 @@
       <ul>
         
           <li>
-            <a href="/2024/07/26/page/">page</a>
+            <a href="/2024/07/28/leetcode-132-pattern/">leetcode_132-pattern</a>
           </li>
         
           <li>
-            <a href="/2024/07/26/hello-world/">Hello World</a>
+            <a href="/2024/07/28/leetcode-arithmetic-slices/">leetcode_arithmetic-slices</a>
           </li>
         
       </ul>
