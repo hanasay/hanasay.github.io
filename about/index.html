@@ -111,7 +111,7 @@
             <div class="header-menu-social">
                 
     <a class="social" target="_blank" href="https://huggingface.co/hanasay">
-        <ion-icon name="smile"></ion-icon>
+        <ion-icon name="happy-outline"></ion-icon>
     </a>
 
     <a class="social" target="_blank" href="https://github.com/hanasay">
@@ -164,7 +164,7 @@
 <div class="page">
   
 <article
-id="page-clz4ge2jr0001364g8wch3bhg"
+id="page-clz4hpscq0002og4g11ew1k3i"
 class="article article-type-page"
 >
   <div class="article-inner">
@@ -185,11 +185,11 @@ class="article article-type-page"
 <h2 id="Animation-State-Machine"><a href="#Animation-State-Machine" class="headerlink" title="Animation State Machine"></a>Animation State Machine</h2><p>Actions for both characters and enemies are achieved through animation state machines.</p>
 <p>Predefined character actions are played under specified conditions. For example, pressing Shift triggers the running animation while moving, and pressing the left mouse button triggers the attack animation.</p>
 <p>Challenge: Predefining character animations requires a significant amount of time to adjust them to look natural. Additionally, due to the numerous different actions characters have, debugging the state machine connections takes a considerable amount of time.</p>
-<p><img src="/about_img/experience/unity_anim.png" alt="RPC workflow"></p>
+<p><img src="/about_img/experience/unity_anim.png" alt="Anim workflow"></p>
 <h2 id="Particle-System"><a href="#Particle-System" class="headerlink" title="Particle System"></a>Particle System</h2><p>To apply effects to specific parts of an object, you’ll need to extract the parts that require the effects and then apply the effects, compiling them into Shader objects.</p>
 <p>Challenge: It’s necessary to dissect models and objects into parts, requiring proficiency in software like Photoshop and Blender.</p>
 <p>Additionally, you’ll need to utilize color matching to ensure the effects blend seamlessly without appearing too abrupt.</p>
-<p><img src="/about_img/experience/unity_effect.png" alt="RPC workflow"></p>
+<p><img src="/about_img/experience/unity_effect.png" alt="Effect workflow"></p>
 <h1 id="National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023"><a href="#National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023" class="headerlink" title="National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)"></a>National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)</h1><p><a target="_blank" rel="noopener" href="https://github.com/kaldi-asr/kaldi">Reference GitHub Kaldi</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/espnet/espnet">Reference GitHub Espnet</a></p>
 <ul>
@@ -197,15 +197,41 @@ class="article article-type-page"
 <li>Espnet</li>
 <li>Speech Recognition</li>
 </ul>
-<p><img src="/about_img/experience/Hakka_asr.png" alt="RPC workflow"></p>
-<h2 id="TDNN-F-algorithm"><a href="#TDNN-F-algorithm" class="headerlink" title="TDNN-F algorithm"></a>TDNN-F algorithm</h2><p>At the very first time, I tried using the existing tool  ‘Kaldi’ to modeling my ASR model. I used TDNN-F algorithm as our approach</p>
+<p><img src="/about_img/experience/Hakka_asr.png" alt="ASR workflow"></p>
+<h2 id="Kaldi-TDNN-F-algorithm"><a href="#Kaldi-TDNN-F-algorithm" class="headerlink" title="Kaldi, TDNN-F algorithm"></a>Kaldi, TDNN-F algorithm</h2><p>At the very first time, I tried using the existing tool  ‘Kaldi’ to modeling my ASR model. I used TDNN-F algorithm as our approach</p>
 <p>Benefit of TDNN-F ： Model will  reference content of the input while training, then pick the most possible answer. </p>
 <p>This approach enables the model to choose characters that better fit the speaker’s current context and semantics when making selections.</p>
 <p><img src="/about_img/experience/tdnn-f.png" alt="RPC workflow"></p>
-<h2 id="Espnet-End-to-End-and-Contextual-Block-Conformer"><a href="#Espnet-End-to-End-and-Contextual-Block-Conformer" class="headerlink" title="Espnet, End-to-End and Contextual-Block-Conformer"></a>Espnet, End-to-End and Contextual-Block-Conformer</h2><p>n the later stages, the modeling was switched to another speech training tool ‘Espnet’. Unlike the ‘GMM &amp; HMM’ architecture of ‘Kaldi’, ‘Espnet’ employs an ‘End to End’ framework.</p></p>
+<h2 id="Espnet-End-to-End-and-Contextual-Block-Conformer"><a href="#Espnet-End-to-End-and-Contextual-Block-Conformer" class="headerlink" title="Espnet, End-to-End and Contextual-Block-Conformer"></a>Espnet, End-to-End and Contextual-Block-Conformer</h2><p>In the later stages, the modeling was switched to another speech training tool ‘Espnet’. Unlike the ‘GMM &amp; HMM’ architecture of ‘Kaldi’, ‘Espnet’ employs an ‘End to End’ framework.</p></p>
 <p>Advantages: Utilizing neural networks, the model can autonomously learn knowledge without the need for optimization at each step of the model.</p>
 <p>Disadvantages: When the model’s performance does not meet expectations, the adjustable part does not like ‘Kaldi’ have so many different state. Therefore, it’s crucial to ensure that training data is abundant enough before considering the use of an End-to-End architecture.</p>
-<p><img src="/about_imb/experience/speech_traditional-1.png" alt="RPC workflow"><br><img src="/about_img/experience/speech_deep-1.png" alt="RPC workflow"></p>
+<p><img src="/about_img/experience/speech_traditional-1.png" alt="ASR workflow"><br><img src="/about_img/experience/speech_deep-1.png" alt="ASR workflow"></p>
+<h1 id="National-Yang-Ming-Chiao-Tung-University-Speech-AI-Research-Center-SARC-July-2023-March-2024"><a href="#National-Yang-Ming-Chiao-Tung-University-Speech-AI-Research-Center-SARC-July-2023-March-2024" class="headerlink" title="National Yang Ming Chiao Tung University, Speech AI Research Center(SARC) (July 2023 - March 2024)"></a>National Yang Ming Chiao Tung University, Speech AI Research Center(SARC) (July 2023 - March 2024)</h1><ul>
+<li>Large Language Model</li>
+<li>Data Preprocessing</li>
+<li>Ubuntu Server Maintain</li>
+<li>GitLab Maintain</li>
+</ul>
+<h2 id="Cooperate-with-TAIDE"><a href="#Cooperate-with-TAIDE" class="headerlink" title="Cooperate with TAIDE"></a>Cooperate with TAIDE</h2><p>TAIDE project, led by prominent academics such as Professor Tsai Tsung-Han from National Central University and Professor Lee Hung-yi from National Taiwan University, is a National Science Council(國科會) initiative. </p>
+<p>TAIDE aims to develop a ChatGPT specifically tailored for Taiwan. </p>
+<p>SARC undertook the task of localizing and adapting the TAIDE model. Collaboration began in September 2023, and by November 2023, the TAIDE model was adapted for Taiwanese languages, including Taiwanese and Hakka. Simultaneously, it was deployed onto the TAIDE public testing platform for use by the TAIDE team and its partners.</p>
+<p>See More About <a target="_blank" rel="noopener" href="https://taide.tw/index">TAIDE</a></p>
+<p><img src="/about_img/experience/TAIDE_1.png" alt="TAIDE"><br><img src="/about_img/experience/TAIDE_2.png" alt="TAIDE"></p>
+<p>Below are the detailed steps for modeling a Large Language Model (LLM):</p>
+<ol>
+<li>Selecting the Base Model:  llama-2, gemma.</li>
+<li>Extend Tokenizer: As the base model lacks knowledge of any specific target language, optimize the Tokenizer for the target language to improve performance.</li>
+<li>Continue Pretrain: At this stage, since the base model lacks knowledge of the target language, expose the model to a large corpus of text in the target language. This helps in cultivating a sense of the new language within the model.</li>
+<li>Fine-Tuning: Once the model becomes familiar with the new language, train it on how to respond to questions posed in the target language. Input a large volume of question-answer pairs to train the model to respond to various queries effectively.</li>
+<li>Output Model.</li>
+</ol>
+<p><img src="/about_img/experience/LLM_arch.png" alt="LLM arch"><br><img src="/about_img/experience/LLM_demo.png" alt="LLM demo"></p>
+<h2 id="Cooperate-with-PHISON-aiDAPTIV"><a href="#Cooperate-with-PHISON-aiDAPTIV" class="headerlink" title="Cooperate with PHISON (aiDAPTIV+)"></a>Cooperate with PHISON (aiDAPTIV+)</h2><h2 id="Maintaining-WorkStation-Machines"><a href="#Maintaining-WorkStation-Machines" class="headerlink" title="Maintaining WorkStation Machines"></a>Maintaining WorkStation Machines</h2><ol>
+<li>Managing all users and their permissions on the server.</li>
+<li>Maintaining the software system environment of the server, including installing updates, patches, and necessary software.</li>
+<li>Ensuring the hardware of the server is functioning optimally by monitoring performance,</li>
+<li>Configuring the server’s network environment, including setting up network connections, firewall configurations. Additionally, setting up Network-Attached Storage (NAS) devices for data storage and sharing.</li>
+</ol>
 
       </div>
   </div>
