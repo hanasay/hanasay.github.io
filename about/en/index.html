@@ -20,7 +20,7 @@
     <meta property="og:description" content=""/>
     <meta property="og:locale" content="cn" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://hanasay.codex.tw/about/index.html" />
+    <meta property="og:url" content="http://hanasay.codex.tw/about/en/index.html" />
     <meta property="og:site_name" content="Matt Zheng" />
     <meta property="article:publisher" content="" />
     <script type="application/ld+json">
@@ -166,87 +166,85 @@
 <div class="page">
   
 <article
-id="page-clz5urm4o0000f84gh8641e6e"
+id="page-clz5urm4r0002f84g6jova2no"
 class="article article-type-page"
 >
   <div class="article-inner">
       <div class="article-entry post-inner-html">
-          <p>語言： 中文 | <a href="/about/en">English</a></p>
-<p>我叫做 Matt， 是一名菜鳥工程師.</p>
-<p>目前我是一名AI工程師，擅長 大語言模型(LLM) 與 語音AI。</p>
-<h1 id="經歷"><a href="#經歷" class="headerlink" title="經歷"></a>經歷</h1><h1 id="大學專題經歷-以-Unity-引擎開發RPG線上遊戲-July-2021-Dec-2022"><a href="#大學專題經歷-以-Unity-引擎開發RPG線上遊戲-July-2021-Dec-2022" class="headerlink" title="大學專題經歷 - 以 Unity 引擎開發RPG線上遊戲 (July 2021 - Dec 2022)"></a>大學專題經歷 - 以 Unity 引擎開發RPG線上遊戲 (July 2021 - Dec 2022)</h1><p><a target="_blank" rel="noopener" href="https://github.com/jerry61635/Heart-of-the-Saint" style="color: rgb(9, 194, 194);">Reference GitHub</a></p>
+          <p>Language: <a href="/about">中文</a> | English</p>
+<p>My name is Matt, I’m a new born software engineer.</p>
+<p>Now I am an AI Engineer. Expert at Large Language Model and Speech AI.</p>
+<h1 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h1><h1 id="Game-Development-Heart-of-the-Saint-July-2021-Dec-2022"><a href="#Game-Development-Heart-of-the-Saint-July-2021-Dec-2022" class="headerlink" title="Game Development Heart of the Saint (July 2021 - Dec 2022)"></a>Game Development Heart of the Saint (July 2021 - Dec 2022)</h1><p><a target="_blank" rel="noopener" href="https://github.com/jerry61635/Heart-of-the-Saint" style="color: rgb(9, 194, 194);">Reference GitHub</a></p>
 <ul>
 <li>Unity</li>
 <li>Network Protocol - RPC</li>
 <li>Animation State Machine</li>
 <li>Particle System</li>
 </ul>
-<h2 id="Network-Protocol-RPC"><a href="#Network-Protocol-RPC" class="headerlink" title="Network Protocol - RPC"></a>Network Protocol - RPC</h2><p>多人連線工具 RPC (Remote Procedure Call) 是以 Client-Server 為基礎而生的工具.</p>
-<p>優點: 伺服器只需要執行一次命令，便可在其他連線端點同步。.</p>
-<p>挑戰: 如果不同的使用者，需要接受的指令不同時，伺服器在傳送命令時會更加的複雜。因此需要針對傳送封包的內容做詳盡的規劃。</p>
+<h2 id="Network-Protocol-RPC"><a href="#Network-Protocol-RPC" class="headerlink" title="Network Protocol - RPC"></a>Network Protocol - RPC</h2><p>Multiplayer connections utilize RPC (Remote Procedure Call) Client-Server architecture for connection establishment.</p>
+<p>Advantages: The server only needs to execute commands once and can send them to all clients simultaneously.</p>
+<p>Challenges: If different clients require receiving different commands, more complex configurations are needed in packet transmission definitions.</p>
 <p><img src="/about_img/experience/ClientRPCs.png" alt="RPC workflow"></p>
-<h2 id="Animation-State-Machine-動畫狀態機"><a href="#Animation-State-Machine-動畫狀態機" class="headerlink" title="Animation State Machine (動畫狀態機)"></a>Animation State Machine (動畫狀態機)</h2><p>遊戲角色與敵人的動作皆由動畫狀態機達成。</p>
-<p>將事先預製好的角色動作，以指定的條件撥放<br>例如: 按下Shift ，移動時要進行跑步的動畫；按下左鍵，進行攻擊</p>
-<p>挑戰: 預製角色動畫需要耗費大量時間調整，使角色動做看起來自然；同時因為角色有非常多不同的動作，在狀態機串接上需要很多時間進行除錯</p>
+<h2 id="Animation-State-Machine"><a href="#Animation-State-Machine" class="headerlink" title="Animation State Machine"></a>Animation State Machine</h2><p>Actions for both characters and enemies are achieved through animation state machines.</p>
+<p>Predefined character actions are played under specified conditions. For example, pressing Shift triggers the running animation while moving, and pressing the left mouse button triggers the attack animation.</p>
+<p>Challenge: Predefining character animations requires a significant amount of time to adjust them to look natural. Additionally, due to the numerous different actions characters have, debugging the state machine connections takes a considerable amount of time.</p>
 <p><img src="/about_img/experience/unity_anim.png" alt="Anim workflow"></p>
-<h2 id="Particle-System"><a href="#Particle-System" class="headerlink" title="Particle System"></a>Particle System</h2><p>針對物件的特定部位，擷取需要套用特效的部分。</p>
-<p>而後進行特效的套用，並且編寫成Shader物件</p>
-<p>困難: 須對模型、物件進行部位拆分，須熟悉使用PhotoShop、Blender等軟體；並能運用配色，使特效不會過於突兀</p>
-<p>另外，你必須要對於色彩搭配有一定的天賦，否則將效果套用後可能會使得物品變得太過突兀。</p>
+<h2 id="Particle-System"><a href="#Particle-System" class="headerlink" title="Particle System"></a>Particle System</h2><p>To apply effects to specific parts of an object, you’ll need to extract the parts that require the effects and then apply the effects, compiling them into Shader objects.</p>
+<p>Challenge: It’s necessary to dissect models and objects into parts, requiring proficiency in software like Photoshop and Blender.</p>
+<p>Additionally, you’ll need to utilize color matching to ensure the effects blend seamlessly without appearing too abrupt.</p>
 <p><img src="/about_img/experience/unity_effect.png" alt="Effect workflow"></p>
 <h1 id="National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023"><a href="#National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023" class="headerlink" title="National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)"></a>National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)</h1><p><a target="_blank" rel="noopener" href="https://github.com/kaldi-asr/kaldi">Reference GitHub Kaldi</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/espnet/espnet">Reference GitHub Espnet</a></p>
 <ul>
 <li>Kaldi</li>
 <li>Espnet</li>
-<li>語音辨識</li>
+<li>Speech Recognition</li>
 </ul>
 <p><img src="/about_img/experience/Hakka_asr.png" alt="ASR workflow"></p>
-<h2 id="Kaldi-TDNN-F-演算法"><a href="#Kaldi-TDNN-F-演算法" class="headerlink" title="Kaldi, TDNN-F 演算法"></a>Kaldi, TDNN-F 演算法</h2><p>最初我嘗試使用現成語音訓練工具 ‘Kaldi’進行建模<br>並使用TDNN-F演算法作為訓練方法</p>
-<p>TDNN-F算法的優點：在訓練時，模型會參考前後文進行學習，從而選擇出最有可能的答案。此舉使得模型在選字時，會更符合語者當下的語境、語意。</p>
+<h2 id="Kaldi-TDNN-F-algorithm"><a href="#Kaldi-TDNN-F-algorithm" class="headerlink" title="Kaldi, TDNN-F algorithm"></a>Kaldi, TDNN-F algorithm</h2><p>At the very first time, I tried using the existing tool  ‘Kaldi’ to modeling my ASR model. I used TDNN-F algorithm as our approach</p>
+<p>Benefit of TDNN-F ： Model will  reference content of the input while training, then pick the most possible answer. </p>
+<p>This approach enables the model to choose characters that better fit the speaker’s current context and semantics when making selections.</p>
 <p><img src="/about_img/experience/tdnn-f.png" alt="RPC workflow"></p>
-<h2 id="Espnet-End-to-End-and-Contextual-Block-Conformer"><a href="#Espnet-End-to-End-and-Contextual-Block-Conformer" class="headerlink" title="Espnet, End-to-End and Contextual-Block-Conformer"></a>Espnet, End-to-End and Contextual-Block-Conformer</h2><p>後期改用語音訓練工具 ‘Espnet’進行建模</p>
-<p>不同於‘Kaldi’的’GMM &amp; HMM’架構，‘Espnet’使用’End to End’架構</p>
-<p>優點: 利用神經網路，模型可以自行學習知識，而不需要對模型的每個步驟進行優化。</p>
-<p>缺點: 在模型結果不如預期時，能調整的部分變少了；因此須確保訓練資料足夠充足，才可以考慮使用End to End架構。</p>
+<h2 id="Espnet-End-to-End-and-Contextual-Block-Conformer"><a href="#Espnet-End-to-End-and-Contextual-Block-Conformer" class="headerlink" title="Espnet, End-to-End and Contextual-Block-Conformer"></a>Espnet, End-to-End and Contextual-Block-Conformer</h2><p>In the later stages, the modeling was switched to another speech training tool ‘Espnet’. Unlike the ‘GMM &amp; HMM’ architecture of ‘Kaldi’, ‘Espnet’ employs an ‘End to End’ framework.</p>
+<p>Advantages: Utilizing neural networks, the model can autonomously learn knowledge without the need for optimization at each step of the model.</p>
+<p>Disadvantages: When the model’s performance does not meet expectations, the adjustable part does not like ‘Kaldi’ have so many different state. Therefore, it’s crucial to ensure that training data is abundant enough before considering the use of an End-to-End architecture.</p>
 <p><img src="/about_img/experience/speech_traditional-1.png" alt="ASR workflow"><br><img src="/about_img/experience/speech_deep-1.png" alt="ASR workflow"></p>
-<h1 id="國立陽明交通大學-Speech-AI-Research-Center-SARC-July-2023-March-2024"><a href="#國立陽明交通大學-Speech-AI-Research-Center-SARC-July-2023-March-2024" class="headerlink" title="國立陽明交通大學, Speech AI Research Center(SARC) (July 2023 - March 2024)"></a>國立陽明交通大學, Speech AI Research Center(SARC) (July 2023 - March 2024)</h1><p><a target="_blank" rel="noopener" href="https://sites.google.com/nycu.edu.tw/sarc">SARC詳細資訊</a></p>
-<ul>
-<li>大語言模型</li>
-<li>資料預處理</li>
-<li>伺服器主機維護</li>
-<li>GitLab 維護</li>
+<h1 id="National-Yang-Ming-Chiao-Tung-University-Speech-AI-Research-Center-SARC-July-2023-March-2024"><a href="#National-Yang-Ming-Chiao-Tung-University-Speech-AI-Research-Center-SARC-July-2023-March-2024" class="headerlink" title="National Yang Ming Chiao Tung University, Speech AI Research Center(SARC) (July 2023 - March 2024)"></a>National Yang Ming Chiao Tung University, Speech AI Research Center(SARC) (July 2023 - March 2024)</h1><ul>
+<li>Large Language Model</li>
+<li>Data Preprocessing</li>
+<li>Ubuntu Server Maintain</li>
+<li>GitLab Maintain</li>
 </ul>
-<h2 id="與-TAIDE-合作"><a href="#與-TAIDE-合作" class="headerlink" title="與 TAIDE 合作"></a>與 TAIDE 合作</h2><p>TAIDE計畫，是由「中央大學  蔡宗翰教授」與「臺灣大學 李宏毅教授」等學界名師主導的國科會計畫。</p>
-<p>TAIDE致力於打造一個台灣專用的ChatGPT。</p>
-<p>SARC對TAIDE模型進行本土化調適，於2023&#x2F;9開始正式合作，並於2023&#x2F;11調適出「台語、客語」大語言模型，並於同一時間上架至TAIDE公測平台，提供給TAIDE團隊與其合作夥伴使用。</p>
-<p>更多有關<a target="_blank" rel="noopener" href="https://taide.tw/index">TAIDE</a></p>
+<h2 id="Cooperate-with-TAIDE"><a href="#Cooperate-with-TAIDE" class="headerlink" title="Cooperate with TAIDE"></a>Cooperate with TAIDE</h2><p>TAIDE project, led by prominent academics such as Professor Tsai Tsung-Han from National Central University and Professor Lee Hung-yi from National Taiwan University, is a National Science Council(國科會) initiative. </p>
+<p>TAIDE aims to develop a ChatGPT specifically tailored for Taiwan. </p>
+<p>SARC undertook the task of localizing and adapting the TAIDE model. Collaboration began in September 2023, and by November 2023, the TAIDE model was adapted for Taiwanese languages, including Taiwanese and Hakka. Simultaneously, it was deployed onto the TAIDE public testing platform for use by the TAIDE team and its partners.</p>
+<p>See More About <a target="_blank" rel="noopener" href="https://taide.tw/index">TAIDE</a></p>
 <p><img src="/about_img/experience/TAIDE_1.png" alt="TAIDE"><br><img src="/about_img/experience/TAIDE_2.png" alt="TAIDE"></p>
-<p>以下是建模大語言模型時的詳細步驟</p>
+<p>Below are the detailed steps for modeling a Large Language Model (LLM):</p>
 <ol>
-<li>選定基礎模型</li>
-<li>對編碼器(Tokenizer)進行目標語言做擴增進行優化。</li>
-<li>在這個階段讓模型閱讀大量目標語言的文章，以此培養模型對新語言的語感。</li>
-<li>學會新語言怎麼說以後，就可以訓練模型如何回答用目標語言提出的問題，此處輸入大量問答題，訓練模型回答不同問題。</li>
-<li>新的模型出爐</li>
+<li>Selecting the Base Model:  llama-2, gemma.</li>
+<li>Extend Tokenizer: As the base model lacks knowledge of any specific target language, optimize the Tokenizer for the target language to improve performance.</li>
+<li>Continue Pretrain: At this stage, since the base model lacks knowledge of the target language, expose the model to a large corpus of text in the target language. This helps in cultivating a sense of the new language within the model.</li>
+<li>Fine-Tuning: Once the model becomes familiar with the new language, train it on how to respond to questions posed in the target language. Input a large volume of question-answer pairs to train the model to respond to various queries effectively.</li>
+<li>Output Model.</li>
 </ol>
 <p><img src="/about_img/experience/LLM_arch.png" alt="LLM arch"><br><img src="/about_img/experience/LLM_demo.png" alt="LLM demo"></p>
-<h2 id="與群聯電子-PHISON-合作-aiDAPTIV"><a href="#與群聯電子-PHISON-合作-aiDAPTIV" class="headerlink" title="與群聯電子(PHISON) 合作 (aiDAPTIV+)"></a>與群聯電子(PHISON) 合作 (aiDAPTIV+)</h2><h2 id="設備維護"><a href="#設備維護" class="headerlink" title="設備維護"></a>設備維護</h2><ol>
-<li>管理Linux伺服器的所有使用者與其權限</li>
-<li>維護Linux伺服器的軟體系統環境</li>
-<li>維護Linux伺服器硬體</li>
-<li>設定Linux伺服器網路環境與跨主機串接、NAS設定</li>
+<h2 id="Cooperate-with-PHISON-aiDAPTIV"><a href="#Cooperate-with-PHISON-aiDAPTIV" class="headerlink" title="Cooperate with PHISON (aiDAPTIV+)"></a>Cooperate with PHISON (aiDAPTIV+)</h2><h2 id="Maintaining-WorkStation-Machines"><a href="#Maintaining-WorkStation-Machines" class="headerlink" title="Maintaining WorkStation Machines"></a>Maintaining WorkStation Machines</h2><ol>
+<li>Managing all users and their permissions on the server.</li>
+<li>Maintaining the software system environment of the server, including installing updates, patches, and necessary software.</li>
+<li>Ensuring the hardware of the server is functioning optimally by monitoring performance,</li>
+<li>Configuring the server’s network environment, including setting up network connections, firewall configurations. Additionally, setting up Network-Attached Storage (NAS) devices for data storage and sharing.</li>
 </ol>
 <h1 id="DLink-AI-Engineer-6-11-now"><a href="#DLink-AI-Engineer-6-11-now" class="headerlink" title="DLink AI Engineer (6&#x2F;11~now)"></a>DLink AI Engineer (6&#x2F;11~now)</h1><ul>
-<li>語音辨識</li>
-<li>大語言模型</li>
-<li>AI翻譯器</li>
+<li>Speech Recognition</li>
+<li>Large Language Model</li>
+<li>Machine Translator</li>
 </ul>
-<h2 id="中文-台語-Whisper-Fine-Tune-6-11-7-12"><a href="#中文-台語-Whisper-Fine-Tune-6-11-7-12" class="headerlink" title="中文+台語 Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)"></a>中文+台語 Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)</h2><p>將大量從 YouTube 獲取的資料進行整理，儘管大多數資料還是有標註不準確的問題。</p>
-<p>使用總共大約800小時的語料進行 Full Fine-Tune.</p>
-<p>最終正確辨識率大約為74%.</p>
-<h2 id="LLM-評估-7-12-now"><a href="#LLM-評估-7-12-now" class="headerlink" title="LLM 評估 (7&#x2F;12~now)"></a>LLM 評估 (7&#x2F;12~now)</h2><p>搭建 Ollama 平台於工作站。</p>
-<p>使用 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.07911">IFEval</a> 來評估模型對與<code>指令順從度</code>的測驗。</p>
+<h2 id="Mandarin-Taigi-Whisper-Fine-Tune-6-11-7-12"><a href="#Mandarin-Taigi-Whisper-Fine-Tune-6-11-7-12" class="headerlink" title="Mandarin &amp; Taigi Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)"></a>Mandarin &amp; Taigi Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)</h2><p>Collect audios with no precise label from YouTube and Dictionary.</p>
+<p>Full Fine-Tune with about 800 hours corpus.</p>
+<p>Character Correction Rate(CCR) approximately 74%.</p>
+<h2 id="LLM-Evaluation-7-12-now"><a href="#LLM-Evaluation-7-12-now" class="headerlink" title="LLM Evaluation (7&#x2F;12~now)"></a>LLM Evaluation (7&#x2F;12~now)</h2><p>Build Ollama services platform.</p>
+<p>Use <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.07911">IFEval</a> to evaluate LLM’s instruction following score.</p>
 
       </div>
   </div>
