@@ -162,6 +162,115 @@
   
     
       <article
+id="post-IFEval"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/2024/07/29/IFEval/">IFEval</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.07911">IFEval</a> 是一種專門用於評估模型<code>指令順從度 (instruction following)</code>的指標</p>
+<p>測試的題目全部都是根據模型的輸出，以客觀的、可辨識的特徵來觀察，模型是否順從使用者要求的指令(instruction)。</p>
+<p>測驗主題包含</p>
+<blockquote>
+<p>關鍵字<br>語言<br>輸出長度限制<br>要求特定內容、格式</p>
+</blockquote>
+<p>以下提供一些實際測驗題目當作範例</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Group</th>
+<th>Instruction Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Keywords</td>
+<td>Include Keywords</td>
+<td>Include keywords {keyword1}, {keyword2} in your response.</td>
+</tr>
+<tr>
+<td>Keywords</td>
+<td>Forbidden Words</td>
+<td>Do not include keywords {forbidden words} in the response.</td>
+</tr>
+<tr>
+<td>Length Constraints</td>
+<td>Number Words</td>
+<td>Answer with at least &#x2F; around &#x2F; at most {N} words.</td>
+</tr>
+<tr>
+<td>Detectable Content</td>
+<td>Postscript</td>
+<td>At the end of your response, please explicitly add a postscript starting with {postscript marker}</td>
+</tr>
+<tr>
+<td>Detectable Format</td>
+<td>JSON Format</td>
+<td>Entire output should be wrapped in JSON format.</td>
+</tr>
+<tr>
+<td>Combination</td>
+<td>Two Responses</td>
+<td>Give two different responses. Responses and only responses should be separated by 6 asterisk symbols: ******.</td>
+</tr>
+<tr>
+<td>Change Cases</td>
+<td>All Uppercase</td>
+<td>Your entire response should be in English, capital letters only.</td>
+</tr>
+<tr>
+<td>Start with &#x2F; End with</td>
+<td>Quotation</td>
+<td>Wrap your entire response with double quotation marks.</td>
+</tr>
+<tr>
+<td>Punctuation</td>
+<td>No Commas</td>
+<td>In your entire response, refrain from the use of any commas.</td>
+</tr>
+</tbody></table>
+<p>由這些例子可以看出，<strong>IFEval</strong>可以作為一個客觀評估<code>模型順從度</code>的指標</p>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2024-07-28T17:51:12.000Z" itemprop="datePublished">2024-07-29</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Paper/">Paper</a>
+        </div>
+    
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-132-pattern"
 class="article article-type-post"
 >
@@ -288,7 +397,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-cate">
     <div class="widget-title"><span>Categories</span></div>
     <div class="widget-inner">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a></li></ul>
     </div>
   </div>
 
@@ -302,6 +411,10 @@ class="article article-type-post"
     <div class="widget-title"><span>Recent Posts</span></div>
     <div class="widget-inner">
       <ul>
+        
+          <li>
+            <a href="/2024/07/29/IFEval/">IFEval</a>
+          </li>
         
           <li>
             <a href="/2024/07/28/132-pattern/">132-pattern</a>
