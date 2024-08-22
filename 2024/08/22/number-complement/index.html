@@ -6,12 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>Archive | Matt Zheng</title>
+    <title>number-complement | Matt Zheng</title>
 
     <meta name="description" content="Matt Zheng">
     <meta name="keywords" content="AI, llm, asr, python, leetcode">
 
     
+
+    <meta property="og:locale" content="cn" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= "number-complement | Matt Zheng"  />
+    <meta property="og:description" content= "Matt Zheng" />
+    <meta property="og:url" content="http://hanasay.codex.tw/2024/08/22/number-complement/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="Matt Zheng" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="Matt Zheng" />
+    <meta name="twitter:title" content="number-complement | Matt Zheng"/>
+    <meta name="twitter:description" content="Matt Zheng"/>
+    <script type="application/ld+json">
+        {
+            "description": "Matt Zheng",
+            "author": { "@type": "Person", "name": "Matt Zheng" },
+            "@type": "BlogPosting",
+            "url": "http://hanasay.codex.tw/2024/08/22/number-complement/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://hanasay.codex.tw/photo1.png"
+            },
+            "name": "Matt Zheng"
+            },
+            "headline": "number-complement | Matt Zheng",
+            "datePublished": "2024-08-22T09:27:17.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http://hanasay.codex.tw/2024/08/22/number-complement/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
 
 
 
@@ -43,7 +78,7 @@
 
 
     <script>
-        window.isPost = false
+        window.isPost = true
         window.aomori = {
             
             
@@ -137,82 +172,116 @@
         <div class="main">
             <section class="inner">
                 <section class="inner-main">
-                    
+                    <div class="post">
+    <article id="post-cm0537lj30007xp4ghn6i5vx4" class="article article-type-post" itemscope
+    itemprop="blogPost">
 
-    
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-year-wrap">
-        <a href="/archives/2024" class="archive-year">2024</a>
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      number-complement
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2024-08-22T09:27:17.000Z" itemprop="datePublished">2024-08-22</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li></ul>
+            </div>
+            
+
+            
+
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/08/22/number-complement/">number-complement</a>
-    </h1>
-  
 
-</article>
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-complement">題目</a></p>
+<p>將 bit 讀下來並做0、1互換<br>由於讀取時是從尾端讀取，最後計算答案時是要從後往前回推</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findComplement</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        mask = <span class="number">1</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">while</span> num &gt; <span class="number">0</span>:</span><br><span class="line">            data.append(<span class="number">0</span> <span class="keyword">if</span> (num &amp; mask) <span class="keyword">else</span> <span class="number">1</span>)</span><br><span class="line">            num = num &gt;&gt; <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data)-<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            ans += data[i]</span><br><span class="line">            ans = ans &lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans &gt;&gt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
+        </div>
+
+    </div>
 
     
-    
-    <article class="archive-article archive-type-post">
-  
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/08/02/RAG%E6%95%99%E5%AD%B8/">RAG教學</a>
-    </h1>
-  
-
-</article>
 
     
-    
-    <article class="archive-article archive-type-post">
-  
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/07/29/IFEval/">IFEval</a>
-    </h1>
-  
-
-</article>
 
     
-    
-    <article class="archive-article archive-type-post">
-  
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/07/28/132-pattern/">132-pattern</a>
-    </h1>
-  
-
-</article>
 
     
+
     
-    <article class="archive-article archive-type-post">
+
+    
+<nav class="article-nav">
   
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/07/28/arithmetic-slices/">arithmetic-slices</a>
-    </h1>
+    <a href="/2024/08/02/RAG%E6%95%99%E5%AD%B8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">RAG教學</div>
+    </a>
   
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=number-complement - Matt Zheng&url=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F08%2F22%2Fnumber-complement%2F">
+            <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=number-complement - Matt Zheng&u=http%3A%2F%2Fhanasay.codex.tw%2F2024%2F08%2F22%2Fnumber-complement%2F">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=number-complement - Matt Zheng&url=http://hanasay.codex.tw/2024/08/22/number-complement/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
 
 </article>
 
 
-    </div></section>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+</div>
                 </section>
             </section>
 
@@ -234,6 +303,12 @@
 <div class="widget" id="widget">
     
       
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
     
       
   <div class="widget-wrap widget-cate">
