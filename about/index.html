@@ -166,14 +166,14 @@
 <div class="page">
   
 <article
-id="page-cm0537lj10002xp4ghum8ftye"
+id="page-cm0kedamz0000i84ge7q5f39m"
 class="article article-type-page"
 >
   <div class="article-inner">
       <div class="article-entry post-inner-html">
           <p>語言： 中文 | <a href="/about/en">English</a></p>
 <p>我叫做 Matt， 是一名菜鳥工程師.</p>
-<p>目前我是一名AI工程師，擅長 大語言模型(LLM) 與 語音AI。</p>
+<p>目前我是一名AI工程師，擅長 <strong>大語言模型(LLM)</strong> 與 <strong>語音AI</strong>。</p>
 <h1 id="經歷"><a href="#經歷" class="headerlink" title="經歷"></a>經歷</h1><h1 id="National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023"><a href="#National-Pintung-University-Hakka-speech-recognition-Project-July-2022-July-2023" class="headerlink" title="National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)"></a>National Pintung University, Hakka speech recognition Project (July 2022 - July 2023)</h1><p><a target="_blank" rel="noopener" href="https://github.com/kaldi-asr/kaldi">Reference GitHub Kaldi</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/espnet/espnet">Reference GitHub Espnet</a></p>
 <ul>
@@ -223,13 +223,17 @@ class="article article-type-page"
 <li>AI翻譯器</li>
 </ul>
 <h2 id="中文-台語-Whisper-Fine-Tune-6-11-7-12"><a href="#中文-台語-Whisper-Fine-Tune-6-11-7-12" class="headerlink" title="中文+台語 Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)"></a>中文+台語 Whisper Fine-Tune (6&#x2F;11~7&#x2F;12)</h2><p>將大量從 YouTube 獲取的資料進行整理，儘管大多數資料還是有標註不準確的問題。</p>
-<p>使用總共大約800小時的語料進行 Full Fine-Tune.</p>
-<p>最終正確辨識率大約為74%.</p>
+<p>使用總共大約800小時的語料(non proof data)進行 Full Fine-Tune.</p>
+<p>最終正確辨識率大約為74%，後續擴增資料後可以繼續提升辨識率.</p>
+<p><img src="/about_img/experience/taigi_whisper.png" alt="ASR demo"></p>
 <h2 id="LLM-評估-7-12-7-30"><a href="#LLM-評估-7-12-7-30" class="headerlink" title="LLM 評估 (7&#x2F;12~7&#x2F;30)"></a>LLM 評估 (7&#x2F;12~7&#x2F;30)</h2><p>搭建 Ollama 平台於工作站。</p>
 <p>使用 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.07911">IFEval</a> 來評估模型對與<code>指令順從度</code>的測驗。</p>
-<h2 id="Retrieval-Augmented-Generation-RAG檢索-7-30-now"><a href="#Retrieval-Augmented-Generation-RAG檢索-7-30-now" class="headerlink" title="Retrieval-Augmented Generation, RAG檢索 (7&#x2F;30~now)"></a>Retrieval-Augmented Generation, RAG檢索 (7&#x2F;30~now)</h2><p>利用RAG技術，進行LLM的優化。</p>
-<p>目前嘗試使LLM具備備忘錄與行事曆的功能。</p>
-
+<p>也可以參考<a href="/2024/07/29/IFEval">文章</a>，我有針對這篇論文做一些簡述。</p>
+<p><img src="/about_img/experience/Breeze_vs_Gemma_vs_Llama31_strict_IFEval_Loose_Score.png" alt="IFEval"></p>
+<h2 id="Retrieval-Augmented-Generation-RAG檢索-7-30-8-29"><a href="#Retrieval-Augmented-Generation-RAG檢索-7-30-8-29" class="headerlink" title="Retrieval-Augmented Generation, RAG檢索 (7&#x2F;30~8&#x2F;29)"></a>Retrieval-Augmented Generation, RAG檢索 (7&#x2F;30~8&#x2F;29)</h2><p>利用 RAG &amp; Prompt Engineering 技術，對LLM進行客製化。</p>
+<p>將未經過fine-tune的LLM，調整為行事曆查詢器，並對行程總結。</p>
+<p><img src="/about_img/experience/memo.png" alt="Memo demo"></p>
+<h2 id="BLE-Socket-server-9-2"><a href="#BLE-Socket-server-9-2" class="headerlink" title="BLE Socket server (9&#x2F;2~?)"></a>BLE Socket server (9&#x2F;2~?)</h2>
       </div>
   </div>
 </article>
@@ -275,7 +279,7 @@ class="article article-type-page"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array-Dynamic-Programming/" rel="tag">Array, Dynamic Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li></ul>
     </div>
   </div>
 
