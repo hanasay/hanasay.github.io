@@ -1,625 +1,344 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-Hant">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    
-    <title>Matt Zheng</title>
-
-    <meta name="description" content="Matt Zheng">
-    <meta name="keywords" content="AI, llm, asr, python, leetcode">
-
-    
-
-
-
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:locale" content="cn" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://hanasay.codex.tw/index.html" />
-    <meta property="og:site_name" content="Matt Zheng" />
-    <meta property="article:publisher" content="" />
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "",
-            "description": "",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Matt Zheng"
-            },
-        }
-    </script>
-
-
-    
-
-    
-    <meta property="algolia:search" data-application-id="JGL0RNH3KZ" data-api-key="b599149a1bd96103bd1416c30453a9d9" data-index-name="hexo">
-    
-
-    
-
-    
-
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📓</text></svg>">
-    
-
-    
-
-    
-
-    
-<link rel="stylesheet" href="/dist/build.css?v=1654266144177.css">
-
-
-    
-<link rel="stylesheet" href="/dist/custom.css?v=1654266144177.css">
-
-
-    <script>
-        window.isPost = false
-        window.aomori = {
-            
-            
-            
-        }
-        window.aomori_logo_typed_animated = true
-        window.aomori_search_algolia = true
-
-    </script>
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Matt Zheng — AI 工程師,專注於語音辨識、大型語言模型與聲音轉換。作品集與線上 Demo。">
+<title>Matt Zheng — 語音 AI 工程師</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎚️</text></svg>">
+</head>
 <body>
+<!-- ===== PAGE CONTENT START ===== -->
+<style>
+:root{
+  --ink:#141a22; --ink2:#1b2330; --ink-line:#2a3444;
+  --paper:#f4f2ec; --card:#fdfcf8; --line:#e4dfd3;
+  --text:#262b33; --mut:#6f6a5e; --mut-ink:#93a0b4;
+  --amber:#e59d33; --amber-d:#b0770f; --amber-soft:#f7e8cf;
+  --mono:Consolas,"SF Mono","Cascadia Code",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper); color:var(--text);
+  font-family:"Segoe UI","PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-size:17px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--amber-d)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--amber-d);
+}
+section{padding:72px 0}
+h2{font-size:1.7rem;letter-spacing:-.01em;text-wrap:balance;margin:.35em 0 .2em}
+.sec-lead{color:var(--mut);max-width:34em}
 
-    <div class="container">
-    <header class="header">
-        <div class="header-type">
-            
-            <div class="header-type-avatar avatar avatar-sm">
-                <img src="/photo1.png" alt="Matt Zheng">
-            </div>
-            
-            <div class="header-type-inner">
-                
-                    <div id="typed-strings" style="display:none">
-                        <p>Matt Zheng</p>
-                    </div>
-                    <a class="header-type-title" id="typed" href="/"></a>
-                
-    
-                
-            </div>
-        </div>
-        <div class="header-menu">
-            <div class="header-menu-inner">
-                
-                <a href="/">Home</a>
-                
-                <a href="/about">About</a>
-                
-                <a href="/archives">Archives</a>
-                
-            </div>
-            <div class="header-menu-social">
-                
-    <a class="social" target="_blank" href="https://huggingface.co/hanasay">
-        <ion-icon name="happy-outline"></ion-icon>
-    </a>
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#ece9e1;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1;padding-top:96px;padding-bottom:150px}
+.hero .eyebrow{color:var(--amber)}
+.hero h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.12;letter-spacing:-.02em;margin:.3em 0 .15em;text-wrap:balance}
+.hero h1 .en{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;color:var(--amber)}
+.hero .tagline{font-size:1.2rem;color:#cfd6e0;max-width:30em;margin-top:.6em}
+.hero .sub{color:var(--mut-ink);margin-top:1em;max-width:36em}
+.hero-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:2em}
+.hero-links a{
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;text-decoration:none;
+  color:#ece9e1;border:1px solid var(--ink-line);border-radius:999px;padding:8px 18px;
+  transition:border-color .2s,color .2s;
+}
+.hero-links a:hover{border-color:var(--amber);color:var(--amber)}
+#wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:110px;display:block;opacity:.9}
 
-    <a class="social" target="_blank" href="https://github.com/hanasay">
-        <ion-icon name="logo-github"></ion-icon>
-    </a>
+/* ---------- featured project ---------- */
+.featured{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:34px}
+.featured-head{padding:34px 38px 6px}
+.featured-head h3{font-size:1.45rem;letter-spacing:-.01em}
+.featured-head h3 .en{font-family:var(--mono);font-weight:600}
+.pitch{font-size:1.12rem;margin-top:.5em;max-width:33em}
+.pitch strong{color:var(--amber-d)}
+.plain{color:var(--mut);margin-top:.7em;max-width:38em}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 22px;padding:22px 38px 4px;list-style:none}
+.feat-grid li{font-size:.92rem;color:var(--text);padding-left:1.2em;position:relative}
+.feat-grid li::before{content:"▸";position:absolute;left:0;color:var(--amber)}
+/* console: the audio A/B panel */
+.console{background:var(--ink);color:#ece9e1;margin:26px 38px;border-radius:10px;padding:22px 26px}
+.console-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.console-title::after{content:"";flex:1;height:1px;background:var(--ink-line)}
+.console-note{font-size:.85rem;color:var(--mut-ink);margin-bottom:14px}
+.channel{display:grid;grid-template-columns:44px 1fr;gap:4px 16px;padding:13px 0;border-top:1px solid var(--ink-line);align-items:center}
+.channel:first-of-type{border-top:0}
+.ch-no{font-family:var(--mono);font-size:.8rem;color:var(--mut-ink);grid-row:span 2;align-self:start;padding-top:4px}
+.ch-label{font-size:.95rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.ch-label small{font-weight:400;color:var(--mut-ink);font-size:.82rem}
+.ch-out .ch-label{color:var(--amber)}
+.rec{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+.channel audio{width:100%;height:36px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:4px 38px 32px}
+.btn{display:inline-block;text-decoration:none;border-radius:8px;padding:11px 24px;font-size:.95rem;font-weight:600;letter-spacing:.02em}
+.btn-primary{background:var(--amber);color:#1c1608}
+.btn-primary:hover{background:#f0ad4a}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--amber-d);color:var(--amber-d)}
+.btn[aria-disabled="true"]{background:var(--amber-soft);color:var(--amber-d);cursor:default}
+.cta-note{font-size:.82rem;color:var(--mut)}
+.stack-line{font-family:var(--mono);font-size:.75rem;color:var(--mut);padding:0 38px 30px;letter-spacing:.02em}
 
-    <a class="social" target="_blank" href="https://discord.com/users/559256218841907250">
-        <ion-icon name="logo-discord"></ion-icon>
-    </a>
+/* ---------- other projects ---------- */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:1.08rem;letter-spacing:-.01em}
+.card .when{font-family:var(--mono);font-size:.72rem;color:var(--mut);letter-spacing:.08em}
+.card p{font-size:.93rem;color:var(--mut)}
+.card .hl{color:var(--text)}
+.card-links{margin-top:auto;padding-top:10px;display:flex;gap:16px}
+.card-links a{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em}
 
-            </div>
-        </div>
+/* ---------- timeline ---------- */
+.timeline{margin-top:34px;border-left:2px solid var(--line);padding-left:30px;display:flex;flex-direction:column;gap:34px}
+.tl{position:relative}
+.tl::before{content:"";position:absolute;left:-37px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--amber)}
+.tl .when{font-family:var(--mono);font-size:.78rem;color:var(--amber-d);letter-spacing:.08em}
+.tl h3{font-size:1.12rem;margin:.15em 0}
+.tl p{color:var(--mut);font-size:.94rem;max-width:40em}
 
-        <div class="header-menu-mobile">
-            <div class="header-menu-mobile-inner" id="mobile-menu-open">
-                <i class="icon icon-menu"></i>
-            </div>
-        </div>
-    </header>
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.skill-col{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.skill-col h3{font-family:var(--mono);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-d);margin-bottom:10px}
+.skill-col ul{list-style:none;font-size:.9rem;color:var(--mut)}
+.skill-col li{padding:3px 0}
 
-    <div class="header-menu-mobile-menu">
-        <div class="header-menu-mobile-menu-bg"></div>
-        <div class="header-menu-mobile-menu-wrap">
-            <div class="header-menu-mobile-menu-inner">
-                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
-                    <i class="icon icon-cross"></i>
-                </div>
-                <div class="header-menu-mobile-menu-list">
-                    
-                    <a href="/">Home</a>
-                    
-                    <a href="/about">About</a>
-                    
-                    <a href="/archives">Archives</a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:var(--mut-ink);padding:56px 0;margin-top:40px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer a{color:#ece9e1;text-decoration:none;font-family:var(--mono);font-size:.85rem;margin-right:22px}
+footer a:hover{color:var(--amber)}
+footer .fine{font-size:.78rem}
 
-</div>
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+@media (max-width:760px){
+  section{padding:52px 0}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .cards,.skills{grid-template-columns:1fr}
+  .featured-head,.cta-row,.stack-line{padding-left:24px;padding-right:24px}
+  .console{margin-left:24px;margin-right:24px}
+  .feat-grid{padding-left:24px;padding-right:24px}
+}
+</style>
 
-    <div class="container">
-        <div class="main">
-            <section class="inner">
-                <section class="inner-main">
-                    <div class="index">
-  
-    
-      <article
-id="post-number-complement"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/2024/08/22/number-complement/">number-complement</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-complement">題目</a></p>
-<p>將 bit 讀下來並做0、1互換<br>由於讀取時是從尾端讀取，最後計算答案時是要從後往前回推</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findComplement</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        mask = <span class="number">1</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">while</span> num &gt; <span class="number">0</span>:</span><br><span class="line">            data.append(<span class="number">0</span> <span class="keyword">if</span> (num &amp; mask) <span class="keyword">else</span> <span class="number">1</span>)</span><br><span class="line">            num = num &gt;&gt; <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data)-<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            ans += data[i]</span><br><span class="line">            ans = ans &lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans &gt;&gt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2024-08-22T09:27:17.000Z" itemprop="datePublished">2024-08-22</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-RAG教學"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/2024/08/02/RAG%E6%95%99%E5%AD%B8/">RAG教學</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h1 id="RAG是什麼"><a href="#RAG是什麼" class="headerlink" title="RAG是什麼"></a>RAG是什麼</h1><p>檢索增強生成（Retrieval-Augmented Generation, RAG）是一種結合了搜尋檢索和生成能力的自然語言處理架構。透過這個架構，模型可以從外部知識庫搜尋相關信息，然後使用這些信息來生成回應或完成特定的NLP任務。</p>
-<p><strong>更通俗一點的說，RAG就像考試時教授允許大家帶的A4大抄，你可以在考試的時候邊看邊回答問題。</strong></p>
-<h1 id="如何實作"><a href="#如何實作" class="headerlink" title="如何實作"></a>如何實作</h1><p>RAG的運作流程如下圖</p>
-<p><img src="/img_source/RAG/RAG_flow.png" alt="RAG flow"></p>
-<p>當中的 「相似度匹配」，近乎是RAG技術的核心</p>
-<p>我們在大抄裡面優先問題的答案，最快的方法是：“找到與問題最相關的詞語”。而想要將自然語言進行“相關度匹配”的時候，就要使用到<code>Sentence Transformer</code>這個工具了。</p>
-<h2 id="Sentence-Transformer"><a href="#Sentence-Transformer" class="headerlink" title="Sentence Transformer"></a>Sentence Transformer</h2><p>目前我們最常處理自然語言的方法是：利用專用的模型，將自然語言嵌入成向量，也就是Vector Embedding。</p>
-<p>這些特別的模型(Sentence Transformer)，是專門針對相近語意的資訊進行訓練。最後模型就可以做到：<strong>評比兩句話之間語意有多相似</strong>，最後再給一個相似程度的分數。</p>
-<h2 id="RAG"><a href="#RAG" class="headerlink" title="RAG"></a>RAG</h2><p>我們要的就是將使用者的問題，利用Sentence Transformer與大抄中內容進行比對。</p>
-<p>如果找到了分數夠高的內容，那說明我們在大抄中找到了答案。我們就將這段大抄送給LLM一併進行生成，由此就可以達成擴增外部知識庫的功能了。<br><img src="/img_source/RAG/text_embed.png" alt="RAG flow"></p>
-<p>取得額外資料後，最後生成的流程可以依照自己的需求重新決定(如 Prompt Parameter…)。</p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p>以下用一段簡短的程式碼進行示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># requirements.txt</span></span><br><span class="line">accelerate</span><br><span class="line">chromadb</span><br><span class="line">jq</span><br><span class="line">langchain</span><br><span class="line">langchain_community</span><br><span class="line">langchain-chroma</span><br><span class="line">sentence-transformers</span><br><span class="line">torch</span><br><span class="line">transformers</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main.py</span></span><br><span class="line"><span class="comment"># Author: Matt Zheng</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Kernel generate tool</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.llms <span class="keyword">import</span> Ollama</span><br><span class="line"></span><br><span class="line"><span class="comment"># For streaming output</span></span><br><span class="line"><span class="keyword">from</span> langchain.callbacks.streaming_stdout <span class="keyword">import</span> (</span><br><span class="line">    StreamingStdOutCallbackHandler</span><br><span class="line">)</span><br><span class="line"><span class="keyword">from</span> langchain.callbacks.manager <span class="keyword">import</span> CallbackManager</span><br><span class="line">callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])</span><br><span class="line"></span><br><span class="line"><span class="comment"># langchain chainer</span></span><br><span class="line"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> LLMChain</span><br><span class="line"><span class="keyword">from</span> langchain.prompts <span class="keyword">import</span> PromptTemplate</span><br><span class="line"><span class="keyword">from</span> langchain_core.output_parsers <span class="keyword">import</span> StrOutputParser</span><br><span class="line"><span class="keyword">from</span> langchain_core.runnables <span class="keyword">import</span> RunnablePassthrough</span><br><span class="line"></span><br><span class="line"><span class="comment"># Embedding</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.embeddings <span class="keyword">import</span> HuggingFaceEmbeddings</span><br><span class="line"></span><br><span class="line"><span class="comment"># RAG</span></span><br><span class="line"><span class="keyword">from</span> langchain_chroma <span class="keyword">import</span> Chroma</span><br><span class="line"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> RetrievalQA</span><br><span class="line"><span class="keyword">from</span> langchain_community.document_loaders <span class="keyword">import</span> CSVLoader</span><br><span class="line"><span class="keyword">from</span> langchain_community.document_loaders <span class="keyword">import</span> JSONLoader</span><br><span class="line"><span class="keyword">from</span> langchain.text_splitter <span class="keyword">import</span> RecursiveCharacterTextSplitter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Embedding</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.embeddings <span class="keyword">import</span> HuggingFaceEmbeddings</span><br><span class="line"></span><br><span class="line"><span class="comment"># utils</span></span><br><span class="line"><span class="keyword">import</span> shutil, os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> os.path.isdir(<span class="string">&#x27;./db&#x27;</span>): shutil.rmtree(<span class="string">&#x27;./db&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># load json data</span></span><br><span class="line">loader = JSONLoader(file_path=<span class="string">&quot;data/RAG_data.json&quot;</span>, jq_schema=<span class="string">&quot;.&quot;</span>, text_content=<span class="literal">False</span>)</span><br><span class="line">data = loader.load()</span><br><span class="line"></span><br><span class="line"><span class="comment"># load csv data</span></span><br><span class="line"><span class="comment"># loader = CSVLoader(file_path=&quot;data/test.csv&quot;, encoding=&#x27;utf8&#x27;)</span></span><br><span class="line"><span class="comment"># data = loader.load()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># split data for batch embedding</span></span><br><span class="line">text_splitter = RecursiveCharacterTextSplitter(</span><br><span class="line">    separators=[<span class="string">&quot;&#125;&quot;</span>],</span><br><span class="line">    chunk_size=<span class="number">100</span>,</span><br><span class="line">    chunk_overlap=<span class="number">0</span></span><br><span class="line">)</span><br><span class="line">data = text_splitter.split_documents(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># load embedding model</span></span><br><span class="line">model_name = <span class="string">&quot;intfloat/multilingual-e5-small&quot;</span></span><br><span class="line">model_kwargs = &#123;<span class="string">&#x27;device&#x27;</span>: <span class="string">&#x27;cpu&#x27;</span>&#125;</span><br><span class="line">embedding = HuggingFaceEmbeddings(</span><br><span class="line">    model_name=model_name,</span><br><span class="line">    model_kwargs=model_kwargs</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># store embedding vectors into database</span></span><br><span class="line">persist_directory = <span class="string">&#x27;db&#x27;</span></span><br><span class="line">vectordb = Chroma.from_documents(</span><br><span class="line">    documents=data,</span><br><span class="line">    embedding=embedding,</span><br><span class="line">    persist_directory=persist_directory,</span><br><span class="line">    collection_metadata=&#123;<span class="string">&quot;hnsw:space&quot;</span>: <span class="string">&quot;cosine&quot;</span>&#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load model</span></span><br><span class="line">llm = Ollama(</span><br><span class="line">    model=your_model_name,</span><br><span class="line">    keep_alive=<span class="number">30</span>,</span><br><span class="line">    temperature=<span class="number">0</span>,</span><br><span class="line">    top_k=<span class="number">40</span>,</span><br><span class="line">    top_p=<span class="number">0.95</span>,</span><br><span class="line">    verbose=<span class="literal">True</span>,</span><br><span class="line">    callbacks=callback_manager</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># RAG parameter</span></span><br><span class="line">top_k = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># load RAG database</span></span><br><span class="line">vectordb = Chroma(persist_directory=<span class="string">&#x27;db&#x27;</span>, embedding_function=embedding)</span><br><span class="line">retriever = vectordb.as_retriever(search_kwargs=&#123;<span class="string">&quot;k&quot;</span>: top_k&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Creating LangChain</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Creating LangChain&#x27;</span>)</span><br><span class="line"></span><br><span class="line">rag_template = <span class="string">&quot;&quot;&quot;請根據 `&#123;input&#125;` 幫我在檔案中找出所有相關的內容，並將結果統整給我，輸出必須為中文</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create RAG search engine</span></span><br><span class="line">qa = RetrievalQA.from_chain_type(</span><br><span class="line">    llm=llm, </span><br><span class="line">    chain_type=<span class="string">&quot;stuff&quot;</span>, </span><br><span class="line">    retriever=retriever, </span><br><span class="line">    verbose=<span class="literal">True</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    user_input = <span class="built_in">input</span>(<span class="string">&quot;User:&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># prepare rag search template</span></span><br><span class="line">    rag_input = rag_template.format_map(&#123;<span class="string">&#x27;input&#x27;</span>: user_input&#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># print similarity search result (debug field)</span></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;========== debug field ==========&#x27;</span>)</span><br><span class="line">    docs = vectordb.similarity_search_with_score(rag_input, k=top_k)</span><br><span class="line">    <span class="keyword">for</span> doc <span class="keyword">in</span> docs:</span><br><span class="line">        <span class="built_in">print</span>(doc)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(docs))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># get RAG result</span></span><br><span class="line">    qa.invoke(rag_input)</span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2024-08-02T08:13:55.000Z" itemprop="datePublished">2024-08-02</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Tool/">Tool</a>
-        </div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-IFEval"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/2024/07/29/IFEval/">IFEval</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.07911">IFEval</a> 是一種專門用於評估模型<code>指令順從度 (instruction following)</code>的指標</p>
-<p>測試的題目全部都是根據模型的輸出，以客觀的、可辨識的特徵來觀察，模型是否順從使用者要求的指令(instruction)。</p>
-<p>測驗主題包含</p>
-<blockquote>
-<p>關鍵字<br>語言<br>輸出長度限制<br>要求特定內容、格式</p>
-</blockquote>
-<p>以下提供一些實際測驗題目當作範例</p>
-<table>
-<thead>
-<tr>
-<th>Instruction</th>
-<th>Group</th>
-<th>Instruction Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Keywords</td>
-<td>Include Keywords</td>
-<td>Include keywords {keyword1}, {keyword2} in your response.</td>
-</tr>
-<tr>
-<td>Keywords</td>
-<td>Forbidden Words</td>
-<td>Do not include keywords {forbidden words} in the response.</td>
-</tr>
-<tr>
-<td>Length Constraints</td>
-<td>Number Words</td>
-<td>Answer with at least &#x2F; around &#x2F; at most {N} words.</td>
-</tr>
-<tr>
-<td>Detectable Content</td>
-<td>Postscript</td>
-<td>At the end of your response, please explicitly add a postscript starting with {postscript marker}</td>
-</tr>
-<tr>
-<td>Detectable Format</td>
-<td>JSON Format</td>
-<td>Entire output should be wrapped in JSON format.</td>
-</tr>
-<tr>
-<td>Combination</td>
-<td>Two Responses</td>
-<td>Give two different responses. Responses and only responses should be separated by 6 asterisk symbols: ******.</td>
-</tr>
-<tr>
-<td>Change Cases</td>
-<td>All Uppercase</td>
-<td>Your entire response should be in English, capital letters only.</td>
-</tr>
-<tr>
-<td>Start with &#x2F; End with</td>
-<td>Quotation</td>
-<td>Wrap your entire response with double quotation marks.</td>
-</tr>
-<tr>
-<td>Punctuation</td>
-<td>No Commas</td>
-<td>In your entire response, refrain from the use of any commas.</td>
-</tr>
-</tbody></table>
-<p>由這些例子可以看出，<strong>IFEval</strong>可以作為一個客觀評估<code>模型順從度</code>的指標</p>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2024-07-28T17:51:12.000Z" itemprop="datePublished">2024-07-29</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Paper/">Paper</a>
-        </div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-132-pattern"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/2024/07/28/132-pattern/">132-pattern</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h2 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述"></a>題目概述</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/132-pattern/">題目</a></p>
-<p>給定輸入矩陣，檢查是否有 “小、大、中” 的子集。</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">find132pattern</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        length = <span class="built_in">len</span>(nums)</span><br><span class="line">        data = []</span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(data) &gt; <span class="number">1</span>:</span><br><span class="line">                out = <span class="literal">False</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(ans), <span class="number">2</span>):</span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] == ans[j] <span class="keyword">and</span> data[-<span class="number">1</span>] == ans[j+<span class="number">1</span>]: out = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] &lt;= ans[j] <span class="keyword">and</span> data[-<span class="number">1</span>] &gt; ans[j]: out = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">if</span> data[<span class="number">0</span>] &lt; ans[j+<span class="number">1</span>] <span class="keyword">and</span> data[-<span class="number">1</span>] &gt;= ans[j+<span class="number">1</span>]: out = <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> out:</span><br><span class="line">                    ans[j] = data[<span class="number">0</span>]</span><br><span class="line">                    ans[j+<span class="number">1</span>] = data[-<span class="number">1</span>]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    ans.append(data[<span class="number">0</span>])</span><br><span class="line">                    ans.append(data[-<span class="number">1</span>])</span><br><span class="line">                <span class="comment">#if nums[i] &lt; data[0]: return True</span></span><br><span class="line">            <span class="keyword">while</span> <span class="built_in">len</span>(data) != <span class="number">0</span> <span class="keyword">and</span> data[-<span class="number">1</span>] &gt; nums[i]: data.pop(-<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(ans) &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="comment">#print(ans)</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(ans), <span class="number">2</span>):</span><br><span class="line">                    <span class="comment">#print(j)</span></span><br><span class="line">                    <span class="comment">#print(nums[i])</span></span><br><span class="line">                    <span class="keyword">if</span> nums[i] &gt; ans[j] <span class="keyword">and</span> nums[i] &lt; ans[j+<span class="number">1</span>]: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            data.append(nums[i])</span><br><span class="line">        <span class="comment">#print(data)</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2024-07-27T18:57:38.000Z" itemprop="datePublished">2024-07-28</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-        </div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-    
-      <article
-id="post-arithmetic-slices"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/2024/07/28/arithmetic-slices/">arithmetic-slices</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h2 id="題目概述"><a href="#題目概述" class="headerlink" title="題目概述"></a>題目概述</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/arithmetic-slices">題目</a></p>
-<p>找出所有等差數列的子矩陣數量，子矩陣長度至少為3</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">numberOfArithmeticSlices</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 建置新的矩陣，紀錄前後差值</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)-<span class="number">1</span>):</span><br><span class="line">            data.append(nums[i+<span class="number">1</span>]-nums[i])</span><br><span class="line">        data.append(-<span class="number">3000</span>)</span><br><span class="line">        left = data[<span class="number">0</span>]</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果差值相同就進行機制演算</span></span><br><span class="line">        <span class="comment"># 可排列可能是從1開始等加上去的</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">            <span class="keyword">if</span> i != left:</span><br><span class="line">                cnt = <span class="number">0</span></span><br><span class="line">                left = i</span><br><span class="line">            <span class="keyword">if</span> i == left:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> cnt &gt; <span class="number">1</span>: ans += cnt-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2024-07-27T18:55:35.000Z" itemprop="datePublished">2024-07-28</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-        </div>
-    
-    
-        <div class="article-tag">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array-Dynamic-Programming/" rel="tag">Array, Dynamic Programming</a></li></ul>
-        </div>
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
-
-  
-</div>
-
-                </section>
-            </section>
-
-            
-            <aside class="sidebar sidebar-search-fix">
-                
-
-    <div class="search">
-    <div class="has-icon-right">
-        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
-        <div class="form-icon">
-            <ion-icon name="search"></ion-icon>
-        </div>
-    </div>
-    <div class="search-result" id="search-ps"></div>
-</div>
-
-
-<div class="widget" id="widget">
-    
-      
-    
-      
-  <div class="widget-wrap widget-cate">
-    <div class="widget-title"><span>Categories</span></div>
-    <div class="widget-inner">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Paper/">Paper</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li></ul>
-    </div>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Speech · Voice · LLM</p>
+    <h1>我教 AI 聽懂人話,<br>也教它開口唱歌。<span class="en">— Matt Zheng</span></h1>
+    <p class="tagline">AI 工程師,專注於語音辨識、大型語言模型與聲音轉換。</p>
+    <p class="sub">從 3000 小時台語語料的辨識模型、國科會 TAIDE 大語言模型合作,到自己動手打造的聲音轉換平台——這裡收錄我做過的事,每一件都盡量附上可以直接聽、直接玩的 Demo。</p>
+    <nav class="hero-links" aria-label="外部連結">
+      <a href="https://github.com/hanasay">GitHub</a>
+      <a href="https://huggingface.co/hanasay">Hugging Face</a>
+      <a href="/archives/">Blog</a>
+      <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
+    </nav>
   </div>
+  <canvas id="wave" aria-hidden="true"></canvas>
+</header>
 
+<section id="rvc-studio">
+  <div class="wrap">
+    <p class="eyebrow reveal">Featured Project</p>
+    <h2 class="reveal">RVC Studio</h2>
+    <p class="sec-lead reveal">一個讓任何人都能上手的「AI 聲音工作室」——從零自建,不套現成介面。</p>
 
-    
-      
-  <div class="widget-wrap widget-tags">
-    <div class="widget-title"><span>Tags</span></div>
-    <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array-Dynamic-Programming/" rel="tag">Array, Dynamic Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget-wrap widget-recent-posts">
-    <div class="widget-title"><span>Recent Posts</span></div>
-    <div class="widget-inner">
-      <ul>
-        
-          <li>
-            <a href="/2024/08/22/number-complement/">number-complement</a>
-          </li>
-        
-          <li>
-            <a href="/2024/08/02/RAG%E6%95%99%E5%AD%B8/">RAG教學</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/29/IFEval/">IFEval</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/28/132-pattern/">132-pattern</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/28/arithmetic-slices/">arithmetic-slices</a>
-          </li>
-        
+    <div class="featured reveal">
+      <div class="featured-head">
+        <h3><span class="en">RVC Studio</span> · AI 聲音轉換平台</h3>
+        <p class="pitch">上傳一段聲音,讓 AI 用<strong>另一個人的嗓音</strong>重新說出來、唱出來。</p>
+        <p class="plain">不需要懂任何技術:登入網頁、挑一個聲音模型、丟進音檔,就能下載成品。也可以直接打字讓 AI 開口、對著麥克風即時變聲,甚至只用一段十幾秒的參考音檔,複製出一個全新的聲音。</p>
+      </div>
+      <ul class="feat-grid">
+        <li>音檔聲音轉換</li>
+        <li>打字轉語音(TTS)</li>
+        <li>麥克風即時變聲</li>
+        <li>零樣本聲音複製</li>
+        <li>自己訓練聲音模型</li>
+        <li>帳號與權限管理</li>
       </ul>
+      <div class="console">
+        <p class="console-title">聽聽看 · Before / After</p>
+        <p class="console-note">用 30 分鐘的人聲語料訓練聲音模型,再讓它「翻唱」一首參考歌曲。</p>
+        <div class="channel">
+          <span class="ch-no">01</span>
+          <span class="ch-label">原始人聲 <small>訓練素材(podcast 錄音)</small></span>
+          <audio controls preload="none" src="audio/podcast.wav"></audio>
+        </div>
+        <div class="channel">
+          <span class="ch-no">02</span>
+          <span class="ch-label">參考歌曲 <small>《訣愛》— 想讓 AI 翻唱的目標</small></span>
+          <audio controls preload="none" src="audio/訣愛.mp3"></audio>
+        </div>
+        <div class="channel ch-out">
+          <span class="ch-no">03</span>
+          <span class="ch-label"><span class="rec"></span>AI 轉換輸出 <small>用 01 的嗓音唱出 02</small></span>
+          <audio controls preload="none" src="audio/紫砂30分鐘訣愛.wav"></audio>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" aria-disabled="true" href="#rvc-studio">🎮 線上試玩</a>
+        <span class="cta-note">互動 Demo 準備中——先聽上面的實際成果!</span>
+        <a class="btn btn-ghost" href="https://github.com/hanasay">GitHub</a>
+      </div>
+      <p class="stack-line">React + TypeScript · FastAPI · PostgreSQL · JWT/RBAC · RVC / kokoro / CosyVoice2 · 即時串流(SOLA crossfade)</p>
     </div>
   </div>
+</section>
 
-    
-      
-  <div class="widget-wrap widget-archive">
-    <div class="widget-title"><span>Archive</span></div>
-    <div class="widget-inner">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a></li></ul>
+<section id="projects" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">More Projects</p>
+    <h2 class="reveal">其他專案</h2>
+    <div class="cards">
+      <div class="card reveal">
+        <span class="when">2024.06 — 進行中</span>
+        <h3>台語語音辨識(Whisper 微調)</h3>
+        <p>對著麥克風說台語,AI 即時打出文字。<span class="hl">以約 3000 小時語料微調 Whisper,正確率從 85% 一路提升到 95% 以上</span>,並蒸餾出可跑在小裝置上的輕量版。</p>
+        <div class="card-links">
+          <a href="https://ainvc.i234.me:8080/twasr/">🎮 線上試用</a>
+          <a href="https://huggingface.co/hanasay">模型頁</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <span class="when">2023.09 — 2024.03</span>
+        <h3>TAIDE 台語/客語大語言模型</h3>
+        <p>在陽明交大語音 AI 研究中心(SARC)參與國科會 <span class="hl">TAIDE「台灣版 ChatGPT」計畫</span>,協力調適出台語、客語大語言模型並上架公測平台。</p>
+        <div class="card-links"><a href="https://taide.tw/index">TAIDE 官網</a></div>
+      </div>
+      <div class="card reveal">
+        <span class="when">2024.07 — 2024.08</span>
+        <h3>RAG 行事曆助理</h3>
+        <p>不重新訓練模型,用<span class="hl">檢索增強生成(RAG)</span>讓現成的 LLM 讀懂你的行事曆——查詢行程、自動總結,是成本最低的模型客製化方法。</p>
+      </div>
+      <div class="card reveal">
+        <span class="when">2025.04</span>
+        <h3>TensorRT 推論加速 + API 服務</h3>
+        <p>把模型轉成 <span class="hl">TensorRT</span> 格式並支援批次推論,大幅加速回應速度;再以 FastAPI 包成正式的推論服務,供前端與其他系統呼叫。</p>
+      </div>
     </div>
   </div>
+</section>
 
-
-    
-</div>
-
-<div id="backtop"><i class="icon icon-arrow-up"></i></div>
-            </aside>
-            
-        </div>
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="reveal">經歷</h2>
+    <div class="timeline">
+      <div class="tl reveal">
+        <span class="when">2024.06 — 現在</span>
+        <h3>D-Link · AI 工程師</h3>
+        <p>語音辨識、大型語言模型與 AI 翻譯產品開發:台語 Whisper 微調、模型蒸餾、TensorRT 加速、RAG 應用與推論 API 服務。</p>
+      </div>
+      <div class="tl reveal">
+        <span class="when">2023.07 — 2024.03</span>
+        <h3>陽明交通大學 · 語音 AI 研究中心(SARC)</h3>
+        <p>參與 TAIDE 大語言模型本土化合作(台語/客語模型上架公測),並負責 GPU 伺服器叢集、GitLab 與網路環境的建置維運。</p>
+      </div>
+      <div class="tl reveal">
+        <span class="when">2022.07 — 2023.07</span>
+        <h3>屏東大學 · 客語語音辨識專題</h3>
+        <p>以 Kaldi(TDNN-F)與 Espnet(End-to-End Conformer)兩套框架為客語建立語音辨識模型,是我進入語音 AI 領域的起點。</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <footer class="footer">
-    <div class="footer-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">Toolbox</p>
+    <h2 class="reveal">技能</h2>
+    <div class="skills">
+      <div class="skill-col reveal">
+        <h3>Speech</h3>
+        <ul><li>Whisper 微調/蒸餾</li><li>Kaldi · Espnet</li><li>RVC 聲音轉換</li><li>kokoro / CosyVoice TTS</li></ul>
+      </div>
+      <div class="skill-col reveal">
+        <h3>LLM</h3>
+        <ul><li>模型微調與評估(IFEval)</li><li>RAG · Prompt Engineering</li><li>Ollama 平台建置</li><li>TAIDE 本土化調適</li></ul>
+      </div>
+      <div class="skill-col reveal">
+        <h3>Engineering</h3>
+        <ul><li>Python · FastAPI</li><li>React + TypeScript</li><li>Docker · TensorRT</li><li>Linux 伺服器維運</li></ul>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Please do not remove this -->
-    <!-- 开源不易，请勿删除 -->
-    <div class="footer-wrap">
-        <div class="footer-inner"> 
-            Matt Zheng &copy; 2025<br>
-            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a>
-        </div>
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="https://github.com/hanasay">GitHub</a>
+      <a href="https://huggingface.co/hanasay">Hugging Face</a>
+      <a href="/archives/">Blog</a>
+      <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
     </div>
-
+    <p class="fine">© 2026 Matt Zheng · 用聲音和模型做點有趣的事</p>
+  </div>
 </footer>
 
-<script type="module" src="https://unpkg.com/ionicons@6.0.2/dist/ionicons/ionicons.esm.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* hero waveform */
+  var cv = document.getElementById('wave'), ctx = cv.getContext('2d'), t = 0;
+  function size(){ cv.width = cv.offsetWidth * devicePixelRatio; cv.height = cv.offsetHeight * devicePixelRatio; }
+  function draw(){
+    var w = cv.width, h = cv.height, n = Math.floor(w / (7 * devicePixelRatio));
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < n; i++) {
+      var x = i / n;
+      var env = Math.sin(x * Math.PI);                       /* taller mid-stage */
+      var a = Math.sin(i * 0.9 + t) * 0.5 + Math.sin(i * 0.23 - t * 0.7) * 0.5;
+      var bh = (0.12 + Math.abs(a) * 0.8 * env) * h;
+      var g = ctx.createLinearGradient(0, h, 0, h - bh);
+      g.addColorStop(0, 'rgba(229,157,51,.75)');
+      g.addColorStop(1, 'rgba(229,157,51,.08)');
+      ctx.fillStyle = g;
+      ctx.fillRect(i * 7 * devicePixelRatio, h - bh, 4 * devicePixelRatio, bh);
+    }
+    t += 0.045;
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  size(); draw();
+  addEventListener('resize', function(){ size(); if (reduce) draw(); });
 
+  /* scroll reveal */
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function(e){ io.observe(e); });
+  }
 
-
-
-
-<script src="/dist/build.js?1654266144177.js"></script>
-
-
-<script src="/dist/custom.js?1654266144177.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /* only one audio playing at a time */
+  var players = document.querySelectorAll('audio');
+  players.forEach(function(p){
+    p.addEventListener('play', function(){
+      players.forEach(function(q){ if (q !== p) q.pause(); });
+    });
+  });
+})();
+</script>
+<!-- ===== PAGE CONTENT END ===== -->
 </body>
-
 </html>
