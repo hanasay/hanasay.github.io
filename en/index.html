@@ -51,6 +51,13 @@ h2{font-size:1.7rem;letter-spacing:-.01em;text-wrap:balance;margin:.35em 0 .2em}
   transition:border-color .2s,color .2s;
 }
 .hero-links a:hover{border-color:var(--amber);color:var(--amber)}
+.lang-switch{
+  position:absolute;top:22px;right:24px;z-index:2;
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-decoration:none;
+  color:var(--mut-ink);border:1px solid var(--ink-line);border-radius:999px;padding:6px 14px;
+  transition:border-color .2s,color .2s;
+}
+.lang-switch:hover{border-color:var(--amber);color:var(--amber)}
 #wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:110px;display:block;opacity:.9}
 
 /* ---------- featured project ---------- */
@@ -147,9 +154,9 @@ footer .fine{font-size:.78rem}
       <a href="https://huggingface.co/hanasay">Hugging Face</a>
       <a href="/archives/">Blog</a>
       <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
-      <a href="/">中文</a>
     </nav>
   </div>
+  <a class="lang-switch" href="/" hreflang="zh-Hant" lang="zh-Hant">中文</a>
   <canvas id="wave" aria-hidden="true"></canvas>
 </header>
 
