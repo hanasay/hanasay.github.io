@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Matt Zheng — AI 工程師,專注於語音辨識、大型語言模型與聲音轉換。作品集與線上 Demo。">
-<title>Matt Zheng — 語音 AI 工程師</title>
+<meta name="description" content="Matt Zheng — AI engineer specializing in speech recognition, large language models, and voice conversion. Portfolio and live demos.">
+<title>Matt Zheng — Speech AI Engineer</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎚️</text></svg>">
 </head>
 <body>
@@ -139,15 +139,15 @@ footer .fine{font-size:.78rem}
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">Speech · Voice · LLM</p>
-    <h1>我教 AI 聽懂人話,<br>也教它開口唱歌。<span class="en">— Matt Zheng</span></h1>
-    <p class="tagline">AI 工程師,專注於語音辨識、大型語言模型與聲音轉換。</p>
-    <p class="sub">從 3000 小時台語語料的辨識模型、國科會 TAIDE 大語言模型合作,到自己動手打造的聲音轉換平台——這裡收錄我做過的事,每一件都盡量附上可以直接聽、直接玩的 Demo。</p>
-    <nav class="hero-links" aria-label="外部連結">
+    <h1>I teach AI to understand speech —<br>and to sing. <span class="en">— Matt Zheng</span></h1>
+    <p class="tagline">AI engineer focused on speech recognition, large language models, and voice conversion.</p>
+    <p class="sub">From a Taiwanese-Hokkien recognition model fine-tuned on 3,000 hours of speech, to the national TAIDE LLM initiative, to a voice-conversion platform I built from scratch — this is a collection of my work, with demos you can listen to and play with wherever possible.</p>
+    <nav class="hero-links" aria-label="External links">
       <a href="https://github.com/hanasay">GitHub</a>
       <a href="https://huggingface.co/hanasay">Hugging Face</a>
       <a href="/archives/">Blog</a>
       <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
-      <a href="/en/">EN</a>
+      <a href="/">中文</a>
     </nav>
   </div>
   <canvas id="wave" aria-hidden="true"></canvas>
@@ -157,47 +157,47 @@ footer .fine{font-size:.78rem}
   <div class="wrap">
     <p class="eyebrow reveal">Featured Project</p>
     <h2 class="reveal">RVC Studio</h2>
-    <p class="sec-lead reveal">一個讓任何人都能上手的「AI 聲音工作室」——從零自建,不套現成介面。</p>
+    <p class="sec-lead reveal">An AI voice studio anyone can use — built entirely from scratch, no off-the-shelf UI.</p>
 
     <div class="featured reveal">
       <div class="featured-head">
-        <h3><span class="en">RVC Studio</span> · AI 聲音轉換平台</h3>
-        <p class="pitch">上傳一段聲音,讓 AI 用<strong>另一個人的嗓音</strong>重新說出來、唱出來。</p>
-        <p class="plain">不需要懂任何技術:登入網頁、挑一個聲音模型、丟進音檔,就能下載成品。也可以直接打字讓 AI 開口、對著麥克風即時變聲,甚至只用一段十幾秒的參考音檔,複製出一個全新的聲音。</p>
+        <h3><span class="en">RVC Studio</span> · AI Voice Conversion Platform</h3>
+        <p class="pitch">Upload a recording and let AI speak it — or sing it — in <strong>someone else's voice</strong>.</p>
+        <p class="plain">No technical knowledge required: log in, pick a voice model, drop in an audio file, and download the result. You can also type text and have the AI speak it, convert your voice live through a microphone, or clone an entirely new voice from just a few seconds of reference audio.</p>
       </div>
       <ul class="feat-grid">
-        <li>音檔聲音轉換</li>
-        <li>打字轉語音(TTS)</li>
-        <li>麥克風即時變聲</li>
-        <li>零樣本聲音複製</li>
-        <li>自己訓練聲音模型</li>
-        <li>帳號與權限管理</li>
+        <li>File-based voice conversion</li>
+        <li>Text-to-speech (TTS)</li>
+        <li>Real-time mic voice changing</li>
+        <li>Zero-shot voice cloning</li>
+        <li>Train your own voice models</li>
+        <li>Accounts &amp; access control</li>
       </ul>
       <div class="console">
-        <p class="console-title">聽聽看 · Before / After</p>
-        <p class="console-note">用 30 分鐘的人聲語料訓練聲音模型,再讓它「翻唱」一首參考歌曲。</p>
+        <p class="console-title">Have a listen · Before / After</p>
+        <p class="console-note">A voice model trained on just 30 minutes of vocal data, then asked to "cover" a reference song.</p>
         <div class="channel">
           <span class="ch-no">01</span>
-          <span class="ch-label">原始人聲 <small>訓練素材(podcast 錄音)</small></span>
-          <audio controls preload="none" src="audio/podcast.wav"></audio>
+          <span class="ch-label">Original voice <small>training data (podcast recording)</small></span>
+          <audio controls preload="none" src="../audio/podcast.wav"></audio>
         </div>
         <div class="channel">
           <span class="ch-no">02</span>
-          <span class="ch-label">參考歌曲 <small>《訣愛》— 想讓 AI 翻唱的目標</small></span>
-          <audio controls preload="none" src="audio/訣愛.mp3"></audio>
+          <span class="ch-label">Reference song <small>"Jue Ai (訣愛)" — the song for the AI to cover</small></span>
+          <audio controls preload="none" src="../audio/訣愛.mp3"></audio>
         </div>
         <div class="channel ch-out">
           <span class="ch-no">03</span>
-          <span class="ch-label"><span class="rec"></span>AI 轉換輸出 <small>用 01 的嗓音唱出 02</small></span>
-          <audio controls preload="none" src="audio/紫砂30分鐘訣愛.wav"></audio>
+          <span class="ch-label"><span class="rec"></span>AI output <small>02 sung in the voice from 01</small></span>
+          <audio controls preload="none" src="../audio/紫砂30分鐘訣愛.wav"></audio>
         </div>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" aria-disabled="true" href="#rvc-studio">🎮 線上試玩</a>
-        <span class="cta-note">互動 Demo 準備中——先聽上面的實際成果!</span>
+        <a class="btn btn-primary" aria-disabled="true" href="#rvc-studio">🎮 Try it live</a>
+        <span class="cta-note">Interactive demo coming soon — listen to the real results above!</span>
         <a class="btn btn-ghost" href="https://github.com/hanasay">GitHub</a>
       </div>
-      <p class="stack-line">React + TypeScript · FastAPI · PostgreSQL · JWT/RBAC · RVC / kokoro / CosyVoice2 · 即時串流(SOLA crossfade)</p>
+      <p class="stack-line">React + TypeScript · FastAPI · PostgreSQL · JWT/RBAC · RVC / kokoro / CosyVoice2 · real-time streaming (SOLA crossfade)</p>
     </div>
   </div>
 </section>
@@ -205,32 +205,32 @@ footer .fine{font-size:.78rem}
 <section id="projects" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow reveal">More Projects</p>
-    <h2 class="reveal">其他專案</h2>
+    <h2 class="reveal">Other Projects</h2>
     <div class="cards">
       <div class="card reveal">
-        <span class="when">2024.06 — 進行中</span>
-        <h3>台語語音辨識(Whisper 微調)</h3>
-        <p>對著麥克風說台語,AI 即時打出文字。<span class="hl">以約 3000 小時語料微調 Whisper,正確率從 85% 一路提升到 95% 以上</span>,並蒸餾出可跑在小裝置上的輕量版。</p>
+        <span class="when">2024.06 — present</span>
+        <h3>Taiwanese-Hokkien ASR (fine-tuned Whisper)</h3>
+        <p>Speak Taiwanese Hokkien into a microphone and watch the transcript appear in real time. <span class="hl">Fine-tuned Whisper on roughly 3,000 hours of speech, pushing accuracy from 85% to over 95%</span>, then distilled a lightweight version that runs on small devices.</p>
         <div class="card-links">
-          <a href="https://ainvc.i234.me:8080/twasr/">🎮 線上試用</a>
-          <a href="https://huggingface.co/hanasay">模型頁</a>
+          <a href="https://ainvc.i234.me:8080/twasr/">🎮 Try it live</a>
+          <a href="https://huggingface.co/hanasay">Model page</a>
         </div>
       </div>
       <div class="card reveal">
         <span class="when">2023.09 — 2024.03</span>
-        <h3>TAIDE 台語/客語大語言模型</h3>
-        <p>在陽明交大語音 AI 研究中心(SARC)參與國科會 <span class="hl">TAIDE「台灣版 ChatGPT」計畫</span>,協力調適出台語、客語大語言模型並上架公測平台。</p>
-        <div class="card-links"><a href="https://taide.tw/index">TAIDE 官網</a></div>
+        <h3>TAIDE Taiwanese &amp; Hakka LLMs</h3>
+        <p>At NYCU's Speech AI Research Center (SARC), contributed to the national <span class="hl">TAIDE project — "Taiwan's ChatGPT"</span> — helping adapt large language models for Taiwanese Hokkien and Hakka and launch them on the public beta platform.</p>
+        <div class="card-links"><a href="https://taide.tw/index">TAIDE website</a></div>
       </div>
       <div class="card reveal">
         <span class="when">2024.07 — 2024.08</span>
-        <h3>RAG 行事曆助理</h3>
-        <p>不重新訓練模型,用<span class="hl">檢索增強生成(RAG)</span>讓現成的 LLM 讀懂你的行事曆——查詢行程、自動總結,是成本最低的模型客製化方法。</p>
+        <h3>RAG Calendar Assistant</h3>
+        <p>No retraining required: used <span class="hl">retrieval-augmented generation (RAG)</span> to let an off-the-shelf LLM read your calendar — querying events and summarizing schedules. The cheapest way to customize a model.</p>
       </div>
       <div class="card reveal">
         <span class="when">2025.04</span>
-        <h3>TensorRT 推論加速 + API 服務</h3>
-        <p>把模型轉成 <span class="hl">TensorRT</span> 格式並支援批次推論,大幅加速回應速度;再以 FastAPI 包成正式的推論服務,供前端與其他系統呼叫。</p>
+        <h3>TensorRT Inference Acceleration + API Service</h3>
+        <p>Converted models to <span class="hl">TensorRT</span> with batched inference for dramatically faster responses, then wrapped everything in a production FastAPI inference service for frontends and other systems to call.</p>
       </div>
     </div>
   </div>
@@ -239,22 +239,22 @@ footer .fine{font-size:.78rem}
 <section id="experience" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow reveal">Experience</p>
-    <h2 class="reveal">經歷</h2>
+    <h2 class="reveal">Experience</h2>
     <div class="timeline">
       <div class="tl reveal">
-        <span class="when">2024.06 — 現在</span>
-        <h3>D-Link · AI 工程師</h3>
-        <p>語音辨識、大型語言模型與 AI 翻譯產品開發:台語 Whisper 微調、模型蒸餾、TensorRT 加速、RAG 應用與推論 API 服務。</p>
+        <span class="when">2024.06 — present</span>
+        <h3>D-Link · AI Engineer</h3>
+        <p>Building speech recognition, LLM, and AI translation products: Taiwanese-Hokkien Whisper fine-tuning, model distillation, TensorRT acceleration, RAG applications, and inference API services.</p>
       </div>
       <div class="tl reveal">
         <span class="when">2023.07 — 2024.03</span>
-        <h3>陽明交通大學 · 語音 AI 研究中心(SARC)</h3>
-        <p>參與 TAIDE 大語言模型本土化合作(台語/客語模型上架公測),並負責 GPU 伺服器叢集、GitLab 與網路環境的建置維運。</p>
+        <h3>NYCU · Speech AI Research Center (SARC)</h3>
+        <p>Contributed to the TAIDE LLM localization effort (Taiwanese Hokkien and Hakka models launched on the public beta), and ran the GPU server cluster, GitLab, and network infrastructure.</p>
       </div>
       <div class="tl reveal">
         <span class="when">2022.07 — 2023.07</span>
-        <h3>屏東大學 · 客語語音辨識專題</h3>
-        <p>以 Kaldi(TDNN-F)與 Espnet(End-to-End Conformer)兩套框架為客語建立語音辨識模型,是我進入語音 AI 領域的起點。</p>
+        <h3>NPTU · Hakka Speech Recognition Project</h3>
+        <p>Built Hakka speech recognition models with both Kaldi (TDNN-F) and Espnet (end-to-end Conformer) — my starting point in speech AI.</p>
       </div>
     </div>
   </div>
@@ -263,19 +263,19 @@ footer .fine{font-size:.78rem}
 <section id="skills" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow reveal">Toolbox</p>
-    <h2 class="reveal">技能</h2>
+    <h2 class="reveal">Skills</h2>
     <div class="skills">
       <div class="skill-col reveal">
         <h3>Speech</h3>
-        <ul><li>Whisper 微調/蒸餾</li><li>Kaldi · Espnet</li><li>RVC 聲音轉換</li><li>kokoro / CosyVoice TTS</li></ul>
+        <ul><li>Whisper fine-tuning / distillation</li><li>Kaldi · Espnet</li><li>RVC voice conversion</li><li>kokoro / CosyVoice TTS</li></ul>
       </div>
       <div class="skill-col reveal">
         <h3>LLM</h3>
-        <ul><li>模型微調與評估(IFEval)</li><li>RAG · Prompt Engineering</li><li>Ollama 平台建置</li><li>TAIDE 本土化調適</li></ul>
+        <ul><li>Fine-tuning &amp; evaluation (IFEval)</li><li>RAG · prompt engineering</li><li>Ollama platform deployment</li><li>TAIDE localization</li></ul>
       </div>
       <div class="skill-col reveal">
         <h3>Engineering</h3>
-        <ul><li>Python · FastAPI</li><li>React + TypeScript</li><li>Docker · TensorRT</li><li>Linux 伺服器維運</li></ul>
+        <ul><li>Python · FastAPI</li><li>React + TypeScript</li><li>Docker · TensorRT</li><li>Linux server operations</li></ul>
       </div>
     </div>
   </div>
@@ -289,7 +289,7 @@ footer .fine{font-size:.78rem}
       <a href="/archives/">Blog</a>
       <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
     </div>
-    <p class="fine">© 2026 Matt Zheng · 用聲音和模型做點有趣的事</p>
+    <p class="fine">© 2026 Matt Zheng · Making fun things with voices and models</p>
   </div>
 </footer>
 
