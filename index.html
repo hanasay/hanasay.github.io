@@ -149,10 +149,13 @@ footer .fine{font-size:.78rem}
     <h1>我教 AI 聽懂人話,<br>也教它開口唱歌。<span class="en">— Matt Zheng</span></h1>
     <p class="tagline">AI 工程師,專注於語音辨識、大型語言模型與聲音轉換。</p>
     <p class="sub">從 3000 小時台語語料的辨識模型、國科會 TAIDE 大語言模型合作,到自己動手打造的聲音轉換平台——這裡收錄我做過的事,每一件都盡量附上可以直接聽、直接玩的 Demo。</p>
+    <div class="cta-row" style="padding-left:0;padding-right:0;margin-top:26px">
+      <a class="btn btn-primary" href="https://125.228.190.156/login" target="_blank" rel="noopener">🎮 線上 Demo — Hanasay AI Studio</a>
+      <span class="cta-note">免註冊,點「Try as guest」就能玩聲音轉換和台語辨識;瀏覽器跳出憑證警告時選「進階 → 繼續前往」即可。</span>
+    </div>
     <nav class="hero-links" aria-label="外部連結">
       <a href="https://github.com/hanasay">GitHub</a>
       <a href="https://huggingface.co/hanasay">Hugging Face</a>
-      <a href="/archives/">Blog</a>
       <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
     </nav>
   </div>
@@ -199,11 +202,6 @@ footer .fine{font-size:.78rem}
           <audio controls preload="none" src="audio/紫砂30分鐘訣愛.wav"></audio>
         </div>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="http://125.228.190.156:5173/login" target="_blank" rel="noopener">🎮 線上試玩</a>
-        <span class="cta-note">免註冊——點「Try as guest」就能上傳音檔、體驗聲音轉換!</span>
-        <a class="btn btn-ghost" href="https://github.com/hanasay/rvc-studio">GitHub 原始碼</a>
-      </div>
       <p class="stack-line">React + TypeScript · FastAPI · PostgreSQL · JWT/RBAC · RVC / kokoro / CosyVoice2 · 即時串流(SOLA crossfade)</p>
     </div>
   </div>
@@ -218,9 +216,6 @@ footer .fine{font-size:.78rem}
         <span class="when">2024.06 — 進行中</span>
         <h3>台語語音辨識(Whisper 微調)</h3>
         <p>對著麥克風說台語,AI 即時打出文字。<span class="hl">以約 3000 小時語料微調 Whisper,正確率從 85% 一路提升到 95% 以上</span>,並蒸餾出可跑在小裝置上的輕量版。</p>
-        <div class="card-links">
-          <a href="https://125.228.190.156/login" target="_blank" rel="noopener">🎮 線上試玩</a>
-        </div>
       </div>
       <div class="card reveal">
         <span class="when">2023.09 — 2024.03</span>
@@ -292,7 +287,6 @@ footer .fine{font-size:.78rem}
     <div>
       <a href="https://github.com/hanasay">GitHub</a>
       <a href="https://huggingface.co/hanasay">Hugging Face</a>
-      <a href="/archives/">Blog</a>
       <a href="mailto:matt.zheng@intellineuron.ai">Email</a>
     </div>
     <p class="fine">© 2026 Matt Zheng · 用聲音和模型做點有趣的事</p>
